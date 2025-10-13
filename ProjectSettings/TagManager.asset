@@ -19,7 +19,7 @@ TagManager:
   - Enemy
   - PlayerStats
   - DamagePlayer
-  - 
+  - PosterChar
   - 
   - 
   - 
@@ -49,4 +49,7 @@ TagManager:
     locked: 0
   - name: GamePlay
     uniqueID: 2068306729
+    locked: 0
+  - name: poster
+    uniqueID: 2379263051
     locked: 0
