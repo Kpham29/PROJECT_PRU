@@ -1,0 +1,17 @@
+<<<<<<< HEAD
+Library/
+Logs/
+Temp/
+Obj/
+Build/
+Builds/
+*.csproj
+*.sln
+*.user
+*.vs
+
+=======
+/Library
+/Temp
+/Logs
+>>>>>>> c9a13b4f0a3cd15d808a09bda44ad10e528e4c8a
