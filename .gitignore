@@ -31,9 +31,10 @@ Assets/AssetStoreTools*
 *.pidb.meta
 *.bak
 
-# ========== Rider / VSCode / JetBrains ==========
+# ========== Rider / VSCode / JetBrains / Visual Studio ==========
 .vscode/
 .idea/
+.vs/
 *.DotSettings.user
 
 # ========== Crash reports & debug logs ==========
