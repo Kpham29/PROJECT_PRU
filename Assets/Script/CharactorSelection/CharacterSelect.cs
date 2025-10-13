@@ -16,7 +16,6 @@ public class CharacterSelect : MonoBehaviour
     private float moveDuration = 0.05f;
     [SerializeField] private AnimationCurve ease;
     [SerializeField] private bool useUnscaledTime = true;
-    [SerializeField] TextMeshProUGUI characterName;
     private Coroutine moveCo;
     private Vector3 containerStartPos;
     // Start is called before the first frame update
