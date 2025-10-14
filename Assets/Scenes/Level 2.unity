@@ -18970,23 +18970,6 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
---- !u!1 &247455431 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1399516599085304420, guid: 13798d68d8e911a469dd017de3975f31, type: 3}
-  m_PrefabInstance: {fileID: 1399516599307850915}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &247455434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 247455431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 393c1ef27e7b2b340b3df3cf7d241223, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &377122582 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5086874804637090949, guid: d8e9ded483886f24c873fa3c8e120543, type: 3}
@@ -19075,7 +19058,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.63, y: 0.61}
+  m_Size: {x: 0.82, y: 0.61}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -19159,7 +19142,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.82, y: 0.61}
-    newSize: {x: 0.63, y: 0.61}
+    newSize: {x: 0.82, y: 0.61}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
