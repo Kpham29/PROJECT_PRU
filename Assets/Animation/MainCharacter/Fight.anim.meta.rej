@@ -1,0 +1,8 @@
+diff a/Assets/Animation/MainCharacter/Fight.anim.meta b/Assets/Animation/MainCharacter/Fight.anim.meta	(rejected hunks)
+@@ -1,5 +1,5 @@
+ fileFormatVersion: 2
+-guid: 872749646be6c1a45878b5f59871c0e4
++guid: 78a8f10d0ad2a0245878b0c03359b116
+ NativeFormatImporter:
+   externalObjects: {}
+   mainObjectFileID: 7400000

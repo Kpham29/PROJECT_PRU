@@ -3,11 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Ground
-  - Enemy
-  - Boundary
-  - ExitDoor
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -15,13 +11,22 @@ TagManager:
   - 
   - Water
   - UI
+<<<<<<< HEAD
   - Ground
   - Player
   - Enemy
   - PlayerStats
   - DamagePlayer
+  - PosterChar
+=======
   - 
   - 
+  - 
+  - 
+  - 
+  - 
+  - 
+>>>>>>> 2da855b (commit change)
   - 
   - 
   - 
@@ -45,9 +50,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+<<<<<<< HEAD
   - name: Background
     uniqueID: 3226139433
     locked: 0
   - name: GamePlay
     uniqueID: 2068306729
     locked: 0
+  - name: poster
+    uniqueID: 2379263051
+    locked: 0
+=======
+>>>>>>> 2da855b (commit change)
