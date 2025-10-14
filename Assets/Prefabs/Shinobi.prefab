@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1399516599085304426}
   - component: {fileID: 1399516599085304427}
+  - component: {fileID: 9019761078299221014}
   m_Layer: 7
   m_Name: Kunai
   m_TagString: Untagged
@@ -58,6 +59,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &9019761078299221014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399516599085304420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 393c1ef27e7b2b340b3df3cf7d241223, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1399516600266840165
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,7 +155,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.3, y: 0.82}
+  m_Size: {x: 0.36, y: 0.79}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -166,7 +179,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.36, y: 0.79}
-    newSize: {x: 0.3, y: 0.82}
+    newSize: {x: 0.36, y: 0.79}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
