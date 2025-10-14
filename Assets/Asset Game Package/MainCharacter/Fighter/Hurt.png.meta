@@ -42,11 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
-  spriteMode: 1
-=======
   spriteMode: 2
->>>>>>> 18802e6172fff5bb92dd8c9b40595760bcaeb585
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,9 +91,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-<<<<<<< HEAD
-    sprites: []
-=======
     sprites:
     - serializedVersion: 2
       name: Hurt_0
@@ -114,8 +107,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56c5b9bf9c338dd4885942aed7001184
-      internalID: -1751967043
+      spriteID: 94c24b28e3d7d4942b8e79b0d6cccc6c
+      internalID: 282760820
       vertices: []
       indices: 
       edges: []
@@ -135,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c7c5567ba5eab0429e04c3b6d7b141e
-      internalID: -1663910106
+      spriteID: 8ab61155a763ba144ae0d4586552f424
+      internalID: 231131712
       vertices: []
       indices: 
       edges: []
@@ -156,31 +149,26 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21dca015d0e2bc949bb21253f847af1b
-      internalID: 1331160085
+      spriteID: c017c2c9752072847944d8f633e04394
+      internalID: 1130351947
       vertices: []
       indices: 
       edges: []
       weights: []
->>>>>>> 18802e6172fff5bb92dd8c9b40595760bcaeb585
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 1a19882b3da56d341a1ff7f343d54858
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-<<<<<<< HEAD
-    nameFileIdTable: {}
-=======
     nameFileIdTable:
-      Hurt_0: -1751967043
-      Hurt_1: -1663910106
-      Hurt_2: 1331160085
->>>>>>> 18802e6172fff5bb92dd8c9b40595760bcaeb585
+      Hurt_0: 282760820
+      Hurt_1: 231131712
+      Hurt_2: 1130351947
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
