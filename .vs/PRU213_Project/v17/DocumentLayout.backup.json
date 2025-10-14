@@ -7,15 +7,18 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\asset game package\\maincharacter\\font.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HBDELL\\OneDrive\\Documents\\FPTU\\FA2025\\PRU213\\PROJECT_PRU\\Assets\\Script\\Control\\Hitbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BF07EE51-6403-AA9E-B311-6CA62B281E2F}|Assembly-CSharp.csproj|C:\\Users\\HBDELL\\OneDrive\\Documents\\FPTU\\FA2025\\PRU213\\PRU213_Project\\assets\\script\\control\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF07EE51-6403-AA9E-B311-6CA62B281E2F}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\control\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BF07EE51-6403-AA9E-B311-6CA62B281E2F}|Assembly-CSharp.csproj|C:\\Users\\HBDELL\\OneDrive\\Documents\\FPTU\\FA2025\\PRU213\\PRU213_Project\\assets\\script\\control\\hitbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF07EE51-6403-AA9E-B311-6CA62B281E2F}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\control\\hitbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HBDELL\\OneDrive\\Documents\\FPTU\\FA2025\\PRU213\\PROJECT_PRU\\Assets\\Script\\Control\\Hitbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HBDELL\\OneDrive\\Documents\\FPTU\\FA2025\\PRU213\\PROJECT_PRU\\Assets\\Script\\Control\\Hitbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,7 +28,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,6 +41,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Hitbox.cs",
+              "DocumentMoniker": "C:\\Users\\HBDELL\\OneDrive\\Documents\\FPTU\\FA2025\\PRU213\\PROJECT_PRU\\Assets\\Script\\Control\\Hitbox.cs",
+              "RelativeDocumentMoniker": "..\\PROJECT_PRU\\Assets\\Script\\Control\\Hitbox.cs",
+              "ToolTip": "C:\\Users\\HBDELL\\OneDrive\\Documents\\FPTU\\FA2025\\PRU213\\PROJECT_PRU\\Assets\\Script\\Control\\Hitbox.cs",
+              "RelativeToolTip": "..\\PROJECT_PRU\\Assets\\Script\\Control\\Hitbox.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T03:39:15.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Hitbox.cs",
+              "DocumentMoniker": "C:\\Users\\HBDELL\\OneDrive\\Documents\\FPTU\\FA2025\\PRU213\\PROJECT_PRU\\Assets\\Script\\Control\\Hitbox.cs",
+              "RelativeDocumentMoniker": "..\\PROJECT_PRU\\Assets\\Script\\Control\\Hitbox.cs",
+              "ToolTip": "C:\\Users\\HBDELL\\OneDrive\\Documents\\FPTU\\FA2025\\PRU213\\PROJECT_PRU\\Assets\\Script\\Control\\Hitbox.cs",
+              "RelativeToolTip": "..\\PROJECT_PRU\\Assets\\Script\\Control\\Hitbox.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T03:39:15.105Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -54,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Hitbox.cs",
               "DocumentMoniker": "C:\\Users\\HBDELL\\OneDrive\\Documents\\FPTU\\FA2025\\PRU213\\PRU213_Project\\Assets\\Script\\Control\\Hitbox.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Control\\Hitbox.cs",
@@ -67,19 +96,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Hitbox.cs",
-              "DocumentMoniker": "C:\\Users\\HBDELL\\OneDrive\\Documents\\FPTU\\FA2025\\PRU213\\PROJECT_PRU\\Assets\\Script\\Control\\Hitbox.cs",
-              "RelativeDocumentMoniker": "..\\PROJECT_PRU\\Assets\\Script\\Control\\Hitbox.cs",
-              "ToolTip": "C:\\Users\\HBDELL\\OneDrive\\Documents\\FPTU\\FA2025\\PRU213\\PROJECT_PRU\\Assets\\Script\\Control\\Hitbox.cs",
-              "RelativeToolTip": "..\\PROJECT_PRU\\Assets\\Script\\Control\\Hitbox.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T03:39:15.105Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Controller.cs",
               "DocumentMoniker": "C:\\Users\\HBDELL\\OneDrive\\Documents\\FPTU\\FA2025\\PRU213\\PRU213_Project\\Assets\\Script\\Control\\Controller.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Control\\Controller.cs",
