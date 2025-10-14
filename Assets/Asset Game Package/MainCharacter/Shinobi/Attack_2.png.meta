@@ -42,11 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
-  spriteMode: 1
-=======
   spriteMode: 2
->>>>>>> 18802e6172fff5bb92dd8c9b40595760bcaeb585
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,9 +91,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-<<<<<<< HEAD
-    sprites: []
-=======
     sprites:
     - serializedVersion: 2
       name: Attack_2_0
@@ -114,8 +107,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c270e0b5ce690943ac44c907c607eb9
-      internalID: -56588613
+      spriteID: 1e2d0a21cf41f0e4282751241ffd7a90
+      internalID: 1045596194
       vertices: []
       indices: 
       edges: []
@@ -135,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bc5a63fae863b04690677bc54b473f5
-      internalID: 1491332923
+      spriteID: 50e82fc4a2a3cef4bb63575cf4993be7
+      internalID: 1805393035
       vertices: []
       indices: 
       edges: []
@@ -156,8 +149,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 216931164e81253428106454e49447ba
-      internalID: 523697898
+      spriteID: b281a99c64156494dafa96455f559dbd
+      internalID: -25420179
       vertices: []
       indices: 
       edges: []
@@ -177,32 +170,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1873413d0291f4e4aae0ea5dac8bbe7f
-      internalID: 1208350285
+      spriteID: 4d10c8eecf85c7a41a199b3cd0e07df6
+      internalID: 1952669608
       vertices: []
       indices: 
       edges: []
       weights: []
->>>>>>> 18802e6172fff5bb92dd8c9b40595760bcaeb585
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 49d885bd8fabd8c4c916f9cc8308b6af
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-<<<<<<< HEAD
-    nameFileIdTable: {}
-=======
     nameFileIdTable:
-      Attack_2_0: -56588613
-      Attack_2_1: 1491332923
-      Attack_2_2: 523697898
-      Attack_2_3: 1208350285
->>>>>>> 18802e6172fff5bb92dd8c9b40595760bcaeb585
+      Attack_2_0: 1045596194
+      Attack_2_1: 1805393035
+      Attack_2_2: -25420179
+      Attack_2_3: 1952669608
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

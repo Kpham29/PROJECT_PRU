@@ -42,11 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
-  spriteMode: 1
-=======
   spriteMode: 2
->>>>>>> 18802e6172fff5bb92dd8c9b40595760bcaeb585
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,9 +91,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-<<<<<<< HEAD
-    sprites: []
-=======
     sprites:
     - serializedVersion: 2
       name: Shield_0
@@ -114,8 +107,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0dc4ec19593847747b6b47cba8edee6a
-      internalID: 1440655988
+      spriteID: 64162571ba1924444adf51460b7de8b0
+      internalID: 1410746929
       vertices: []
       indices: 
       edges: []
@@ -135,30 +128,25 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c98595a07b0dd444b6ac42486ab4558
-      internalID: -1536176280
+      spriteID: e28666907a65edd46a062592dbb0c789
+      internalID: -1211699102
       vertices: []
       indices: 
       edges: []
       weights: []
->>>>>>> 18802e6172fff5bb92dd8c9b40595760bcaeb585
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 959a7459624ea0d45a8f749853e11951
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-<<<<<<< HEAD
-    nameFileIdTable: {}
-=======
     nameFileIdTable:
-      Shield_0: 1440655988
-      Shield_1: -1536176280
->>>>>>> 18802e6172fff5bb92dd8c9b40595760bcaeb585
+      Shield_0: 1410746929
+      Shield_1: -1211699102
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
