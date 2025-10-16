@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\HBDELL\\OneDrive\\Documents\\FPTU\\FA2025\\PRU213\\PRU213_Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BF07EE51-6403-AA9E-B311-6CA62B281E2F}|Assembly-CSharp.csproj|c:\\users\\hbdell\\onedrive\\documents\\fptu\\fa2025\\pru213\\pru213_project\\assets\\script\\trapbehaviour\\trapsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF07EE51-6403-AA9E-B311-6CA62B281E2F}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\trapbehaviour\\trapsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BF07EE51-6403-AA9E-B311-6CA62B281E2F}|Assembly-CSharp.csproj|c:\\users\\hbdell\\onedrive\\documents\\fptu\\fa2025\\pru213\\pru213_project\\assets\\script\\enemy\\patrollingstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF07EE51-6403-AA9E-B311-6CA62B281E2F}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\enemy\\patrollingstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -62,19 +66,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "TrapSystem.cs",
+              "DocumentMoniker": "C:\\Users\\HBDELL\\OneDrive\\Documents\\FPTU\\FA2025\\PRU213\\PRU213_Project\\Assets\\Script\\TrapBehaviour\\TrapSystem.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\TrapBehaviour\\TrapSystem.cs",
+              "ToolTip": "C:\\Users\\HBDELL\\OneDrive\\Documents\\FPTU\\FA2025\\PRU213\\PRU213_Project\\Assets\\Script\\TrapBehaviour\\TrapSystem.cs",
+              "RelativeToolTip": "Assets\\Script\\TrapBehaviour\\TrapSystem.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T00:01:20.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "PatrollingStateMachine.cs",
               "DocumentMoniker": "C:\\Users\\HBDELL\\OneDrive\\Documents\\FPTU\\FA2025\\PRU213\\PRU213_Project\\Assets\\Script\\Enemy\\PatrollingStateMachine.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Enemy\\PatrollingStateMachine.cs",
               "ToolTip": "C:\\Users\\HBDELL\\OneDrive\\Documents\\FPTU\\FA2025\\PRU213\\PRU213_Project\\Assets\\Script\\Enemy\\PatrollingStateMachine.cs",
               "RelativeToolTip": "Assets\\Script\\Enemy\\PatrollingStateMachine.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAADYAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAMBUwDYAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-14T04:38:41.145Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "MainMenu.cs",
               "DocumentMoniker": "C:\\Users\\HBDELL\\OneDrive\\Documents\\FPTU\\FA2025\\PRU213\\PRU213_Project\\Assets\\Script\\Menu\\MainMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Menu\\MainMenu.cs",
@@ -86,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "PauseMenu.cs",
               "DocumentMoniker": "C:\\Users\\HBDELL\\OneDrive\\Documents\\FPTU\\FA2025\\PRU213\\PRU213_Project\\Assets\\Script\\Menu\\PauseMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Menu\\PauseMenu.cs",
@@ -98,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "CharacterStat.cs",
               "DocumentMoniker": "C:\\Users\\HBDELL\\OneDrive\\Documents\\FPTU\\FA2025\\PRU213\\PRU213_Project\\Assets\\Script\\CharacterStatManager\\CharacterStat.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\CharacterStatManager\\CharacterStat.cs",
@@ -110,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CharacterSelect.cs",
               "DocumentMoniker": "C:\\Users\\HBDELL\\OneDrive\\Documents\\FPTU\\FA2025\\PRU213\\PRU213_Project\\Assets\\Script\\CharactorSelection\\CharacterSelect.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\CharactorSelection\\CharacterSelect.cs",
@@ -122,7 +139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Hitbox.cs",
               "DocumentMoniker": "C:\\Users\\HBDELL\\OneDrive\\Documents\\FPTU\\FA2025\\PRU213\\PROJECT_PRU\\Assets\\Script\\Control\\Hitbox.cs",
               "RelativeDocumentMoniker": "..\\PROJECT_PRU\\Assets\\Script\\Control\\Hitbox.cs",
@@ -134,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Hitbox.cs",
               "DocumentMoniker": "C:\\Users\\HBDELL\\OneDrive\\Documents\\FPTU\\FA2025\\PRU213\\PRU213_Project\\Assets\\Script\\Control\\Hitbox.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Control\\Hitbox.cs",
@@ -146,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Controller.cs",
               "DocumentMoniker": "C:\\Users\\HBDELL\\OneDrive\\Documents\\FPTU\\FA2025\\PRU213\\PRU213_Project\\Assets\\Script\\Control\\Controller.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Control\\Controller.cs",
@@ -154,8 +171,7 @@
               "RelativeToolTip": "Assets\\Script\\Control\\Controller.cs",
               "ViewState": "AgIAAD4AAAAAAAAAAAAgwFUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T03:38:51.512Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-10T03:38:51.512Z"
             }
           ]
         }
