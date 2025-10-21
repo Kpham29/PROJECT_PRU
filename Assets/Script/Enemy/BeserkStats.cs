@@ -7,7 +7,7 @@ public class BeserkStats : EnemyStats
     [SerializeField] protected EnemyStateMachine enemyStateMachine;
     protected override void DamageProcess()
     {
-        
+         
         base.DamageProcess();
     }
 

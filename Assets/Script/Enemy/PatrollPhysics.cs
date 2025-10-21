@@ -47,7 +47,7 @@ public class PatrollPhysics : MonoBehaviour
         Gizmos.DrawWireSphere(groundCheckPoint.position, checkRadius);
         Gizmos.DrawWireSphere(wallCheckPoint.position, checkRadius);
         Gizmos.DrawLine(frontCheckPoint.position, frontCheckPoint.position + transform.right* (-1) * rayFrontCheckLength);
-        Gizmos.DrawLine(backCheckPoint.position, backCheckPoint.position + transform.right*rayBehindCheckLength);
+        Gizmos.DrawLine(backCheckPoint.position, backCheckPoint.position + transform.right*rayBehindCheckLength);  
     }
 
     //Đứng yên để hành động

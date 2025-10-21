@@ -70,7 +70,7 @@ public class PatrollingStateMachine : EnemyStateMachine
     public override void UpdateMove()
     {
         moveStateTimer -= Time.deltaTime;
-        if (moveStateTimer <= 0 && patrollPhysics.playerAhead != false)
+        if (moveStateTimer <= 0 && patrollPhysics.playerAhead == false)
             ChangeState(EnemyState.Idle);
 
         if (turnCooldown > 0)
@@ -144,7 +144,7 @@ public class PatrollingStateMachine : EnemyStateMachine
 
     #endregion
 
-    #region DEAD
+    #region DEATH
     public override void EnterDeath()
     {
         anim.Play(deathAnimation);
