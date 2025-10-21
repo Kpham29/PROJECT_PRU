@@ -42,11 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
-  spriteMode: 1
-=======
   spriteMode: 2
->>>>>>> 18802e6172fff5bb92dd8c9b40595760bcaeb585
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,9 +91,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-<<<<<<< HEAD
-    sprites: []
-=======
     sprites:
     - serializedVersion: 2
       name: Dead_0
@@ -114,8 +107,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c891bbb9407d2f045880d88503ed731f
-      internalID: 1659867433
+      spriteID: 114b9b881c7685b4f8dbd62e1d09a7c2
+      internalID: -1032751018
       vertices: []
       indices: 
       edges: []
@@ -135,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2706de0e192712942b89871766396988
-      internalID: -1563489233
+      spriteID: c7edc403afe706f449b62b725369258a
+      internalID: -1478255977
       vertices: []
       indices: 
       edges: []
@@ -156,8 +149,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1465c9157ccd924490db2f7997c7ffa
-      internalID: -706278786
+      spriteID: a6d6d00781e4a474bb5890085612f8ce
+      internalID: 1917681680
       vertices: []
       indices: 
       edges: []
@@ -177,32 +170,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69e34f40ce4b58f46af19967f8c1feec
-      internalID: 890789107
+      spriteID: 0a129d5b34cfaf6499d5372d1bb52b8e
+      internalID: 973426231
       vertices: []
       indices: 
       edges: []
       weights: []
->>>>>>> 18802e6172fff5bb92dd8c9b40595760bcaeb585
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: dc52312350096394c8a269c35af93399
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-<<<<<<< HEAD
-    nameFileIdTable: {}
-=======
     nameFileIdTable:
-      Dead_0: 1659867433
-      Dead_1: -1563489233
-      Dead_2: -706278786
-      Dead_3: 890789107
->>>>>>> 18802e6172fff5bb92dd8c9b40595760bcaeb585
+      Dead_0: -1032751018
+      Dead_1: -1478255977
+      Dead_2: 1917681680
+      Dead_3: 973426231
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

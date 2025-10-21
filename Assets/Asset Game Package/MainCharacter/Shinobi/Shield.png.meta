@@ -42,11 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
-  spriteMode: 1
-=======
   spriteMode: 2
->>>>>>> 18802e6172fff5bb92dd8c9b40595760bcaeb585
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,9 +91,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-<<<<<<< HEAD
-    sprites: []
-=======
     sprites:
     - serializedVersion: 2
       name: Shield_0
@@ -114,8 +107,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e15b19b543179d4aab0b2b55b99286e
-      internalID: 1083141609
+      spriteID: 54df7d0d02e7abe4cac5148f4912699a
+      internalID: -1156526951
       vertices: []
       indices: 
       edges: []
@@ -135,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2b4249e565a4364ba3e1c1f17e4c3af
-      internalID: -792987174
+      spriteID: d53e4138c8ac8cd489a157e54984978a
+      internalID: 641058305
       vertices: []
       indices: 
       edges: []
@@ -156,8 +149,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fcaf7df871a96c4faeac98abd2279fb
-      internalID: -1749528441
+      spriteID: a2037562b9950e8478d44d1b42e161e3
+      internalID: 1157945566
       vertices: []
       indices: 
       edges: []
@@ -177,32 +170,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 998d7fb4470187a459e4dfa7654d9ba1
-      internalID: 2117713694
+      spriteID: 95e044190f86b2b4ea9e88b627b873c6
+      internalID: -1131446751
       vertices: []
       indices: 
       edges: []
       weights: []
->>>>>>> 18802e6172fff5bb92dd8c9b40595760bcaeb585
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 7d0a5a6a0717f7241957ea3919aaa980
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-<<<<<<< HEAD
-    nameFileIdTable: {}
-=======
     nameFileIdTable:
-      Shield_0: 1083141609
-      Shield_1: -792987174
-      Shield_2: -1749528441
-      Shield_3: 2117713694
->>>>>>> 18802e6172fff5bb92dd8c9b40595760bcaeb585
+      Shield_0: -1156526951
+      Shield_1: 641058305
+      Shield_2: 1157945566
+      Shield_3: -1131446751
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

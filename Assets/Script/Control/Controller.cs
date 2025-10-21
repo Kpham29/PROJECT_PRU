@@ -84,7 +84,7 @@ public class Controller : MonoBehaviour
         {
             grounded = true;
         }
-        if (collision.gameObject.CompareTag("Boundary"))
+        if (collision.gameObject.CompareTag("Trap"))
         {
             StartCoroutine(RemoveAfterDie());
             animator.SetTrigger("Die");
