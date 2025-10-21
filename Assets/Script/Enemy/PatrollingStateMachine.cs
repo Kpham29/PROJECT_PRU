@@ -21,8 +21,11 @@ public class PatrollingStateMachine : EnemyStateMachine
     private float moveStateTimer;
     private float turnCooldown;
 
-    [Header("MOVE STATE")]
-    [SerializeField] private string attackAnimation;
+    [Header("ATTACK STATE")]
+    [SerializeField] private string attackAnimation; 
+
+    [Header("DEATH STATE")]
+    [SerializeField] private string deathAnimation;
 
 
     #region IDLE
@@ -35,8 +38,16 @@ public class PatrollingStateMachine : EnemyStateMachine
 
     public override void UpdateIdle()
     {
+        if (patrollPhysics.playerBehind)
+        {
+            ForceFlip();
+            speed *= -1;
+            turnCooldown = minimumTurnDelay;
+            ChangeState(EnemyState.Move);
+        }
+
         idleStateTimer -= Time.deltaTime;
-        if (idleStateTimer <= 0)
+        if (idleStateTimer <= 0 || patrollPhysics.playerAhead)
             ChangeState(EnemyState.Move);
 
         if (patrollPhysics.inAttackRange)
@@ -59,11 +70,19 @@ public class PatrollingStateMachine : EnemyStateMachine
     public override void UpdateMove()
     {
         moveStateTimer -= Time.deltaTime;
-        if (moveStateTimer <= 0)
+        if (moveStateTimer <= 0 && patrollPhysics.playerAhead != false)
             ChangeState(EnemyState.Idle);
 
         if (turnCooldown > 0)
             turnCooldown -= Time.deltaTime;
+
+        if(patrollPhysics.playerBehind && turnCooldown <= 0)
+        {
+            ForceFlip();
+            speed *= -1;
+            turnCooldown = minimumTurnDelay;
+            return;
+        }
 
         if(patrollPhysics.wallDetected || patrollPhysics.groundDetected == false)
         {
@@ -90,6 +109,7 @@ public class PatrollingStateMachine : EnemyStateMachine
     {
         anim.Play(attackAnimation);
         patrollPhysics.NegateForces();
+        patrollPhysics.canCheckBehind = false;
     }
 
     public void EndOfAttack()
@@ -103,7 +123,13 @@ public class PatrollingStateMachine : EnemyStateMachine
         {
             ChangeState(previousState);
         }
-        
+        StartCoroutine(CheckBehindDelay());
+    }
+
+    IEnumerator CheckBehindDelay()
+    {
+        yield return new WaitForSeconds(0.3f);
+        patrollPhysics.canCheckBehind = true;
     }
 
     public override void UpdateAttack()
@@ -116,5 +142,14 @@ public class PatrollingStateMachine : EnemyStateMachine
         base.FixUpdateAttack();
     }
 
+    #endregion
+
+    #region DEAD
+    public override void EnterDeath()
+    {
+        anim.Play(deathAnimation);
+        patrollPhysics.DeathColliderDeactivation();
+        patrollPhysics.NegateForces();
+    }
     #endregion
 }
