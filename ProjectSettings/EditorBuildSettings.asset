@@ -4,5 +4,41 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 9a355ceeadcc5ca42a2e482776c8e489
+  - enabled: 1
+    path: Assets/Scenes/MyMap.unity
+    guid: 213a93fc7726c1a4991794124e2c68bd
+  - enabled: 1
+    path: Assets/Scenes/CharacterSelection.unity
+    guid: 0b8732b641863e54db7f779b0636bfdb
+  - enabled: 1
+    path: Assets/Scenes/DuyScene.unity
+    guid: 78a440ed2aa657143b1f2c4f26d87b90
+  - enabled: 1
+    path: Assets/Scenes/MyMap2.unity
+    guid: 975ca53faf1b64b4086861c368d9bf27
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: d65a460a338d6384595ddfdd06a9e042
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: fc8c65d1af74b8f4aa02ba88237a0ecc
+  - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: 1e828025d03171947b8247d2f581e6ce
+  - enabled: 1
+    path: Assets/Scenes/Level 4.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Mymap3.unity
+    guid: aae346daa68f9c241868427131696919
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 03a6ddeb676c04a418acf7b3cfb9f133
+  - enabled: 1
+    path: Assets/Scenes/TestScene.unity
+    guid: b8b2aba86828eef48834ce1cf044ae7c
   m_configObjects: {}
