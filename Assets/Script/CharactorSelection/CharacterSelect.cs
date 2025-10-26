@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Security.Cryptography.X509Certificates;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 // using Color = UnityEngine.Color;
@@ -18,6 +19,7 @@ public class CharacterSelect : MonoBehaviour
     [SerializeField] private bool useUnscaledTime = true;
     private Coroutine moveCo;
     private Vector3 containerStartPos;
+    [SerializeField] TextMeshProUGUI characterName;
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +63,7 @@ public class CharacterSelect : MonoBehaviour
             {
                 charactor[i].GetComponent<SpriteRenderer>().color = Color.white;
                 charactor[i].GetComponent<Animator>().enabled = true;
+                characterName.text =  charactor[i].name;
 
                 if (i == 0 && lastSelected == 0)
                 {
