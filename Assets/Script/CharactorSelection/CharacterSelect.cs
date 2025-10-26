@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Security.Cryptography.X509Certificates;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 // using Color = UnityEngine.Color;
 
@@ -11,7 +12,7 @@ using UnityEngine.UI;
 public class CharacterSelect : MonoBehaviour
 {
     private int index;
-    private int lastSelected;
+    private int selectedIndex;
     [SerializeField] Transform container;
     [SerializeField] GameObject[] charactor;
     private float moveDuration = 0.05f;
@@ -24,7 +25,7 @@ public class CharacterSelect : MonoBehaviour
     void Start()
     {
         index = 0;
-        lastSelected = 0;
+        selectedIndex = 0;
         SelectCharactor();
         containerStartPos = container.transform.position;
     }
@@ -41,7 +42,7 @@ public class CharacterSelect : MonoBehaviour
         {
             index--;
             SelectCharactor();
-            lastSelected = index;
+            selectedIndex = index;
         }
     }
 
@@ -51,7 +52,7 @@ public class CharacterSelect : MonoBehaviour
         {
             index++;
             SelectCharactor();
-            lastSelected = index;
+            selectedIndex = index;
         }
     }
 
@@ -65,7 +66,7 @@ public class CharacterSelect : MonoBehaviour
                 charactor[i].GetComponent<Animator>().enabled = true;
                 characterName.text =  charactor[i].name;
 
-                if (i == 0 && lastSelected == 0)
+                if (i == 0 && selectedIndex == 0)
                 {
                     continue;
                 }
@@ -103,5 +104,13 @@ public class CharacterSelect : MonoBehaviour
             yield return null;
         }
         tf.position = target;
+    }
+    
+    public void PlayGame()
+    {
+        PlayerPrefs.SetInt("SelectedCharacter", selectedIndex);
+        PlayerPrefs.Save();
+
+        SceneManager.LoadScene("Level 1");
     }
 }
