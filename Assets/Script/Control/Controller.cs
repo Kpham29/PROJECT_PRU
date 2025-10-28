@@ -25,6 +25,7 @@ public class Controller : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (gameObject.GetComponent<CharacterStat>().isDead) return;
         float move = Input.GetAxis("Horizontal");
         float speed = isRunning ? runSpeed : moveSpeed;
         myBody.velocity = new Vector2(move * speed, myBody.velocity.y);
@@ -43,6 +44,7 @@ public class Controller : MonoBehaviour
 
     void Update()
     {
+        if (gameObject.GetComponent<CharacterStat>().isDead) return;
         animator.SetBool("IsGrounded", grounded);
         if (Input.GetButtonDown("Jump") && grounded)
         {
@@ -82,12 +84,14 @@ public class Controller : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            grounded = true;
-        }
-        if (collision.gameObject.CompareTag("Trap"))
-        {
-            StartCoroutine(RemoveAfterDie());
-            animator.SetTrigger("Die");
+            foreach (ContactPoint2D contact in collision.contacts)
+            {
+                if (contact.normal.y > 0.5f)
+                {
+                    grounded = true;
+                    break;
+                }
+            }
         }
     }
 
@@ -99,10 +103,11 @@ public class Controller : MonoBehaviour
         }
     }
 
-    private IEnumerator RemoveAfterDie()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        float length = animator.GetCurrentAnimatorClipInfo(0).Length;
-        yield return new WaitForSeconds(length);
-        Destroy(gameObject);
+        if (collision.CompareTag("Trap"))
+        {
+            gameObject.GetComponent<CharacterStat>().TakeDamage(20);
+        }
     }
 }

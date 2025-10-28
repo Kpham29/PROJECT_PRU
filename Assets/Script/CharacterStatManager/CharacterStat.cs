@@ -10,6 +10,7 @@ public class CharacterStat : MonoBehaviour
 
     private int currentHealth;
     private Animator animator;
+    public bool isDead = false;
 
     void Start()
     {
@@ -23,6 +24,7 @@ public class CharacterStat : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            isDead = true;
             StartCoroutine(RemoveAfterAni());
             animator.SetTrigger("Die");
         }
@@ -34,6 +36,7 @@ public class CharacterStat : MonoBehaviour
 
     public void Attack(CharacterStat stat)
     {
+        if (isDead) return;
         stat.TakeDamage(damage);
     }
 
