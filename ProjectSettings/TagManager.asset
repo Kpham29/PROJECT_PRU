@@ -8,6 +8,9 @@ TagManager:
   - Enemy
   - ExitDoor
   - Trap
+  - Chest
+  - HealItem
+  - BuffItem
   layers:
   - Default
   - TransparentFX
