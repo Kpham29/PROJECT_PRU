@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -51,6 +51,10 @@ public class Controller : MonoBehaviour
             grounded = false;
             myBody.velocity = new Vector2(myBody.velocity.x, jumpHeight);
             animator.SetTrigger("Jump");
+            
+            // Play jump sound
+            if (AudioManager.Instance != null)
+                AudioManager.Instance.PlayPlayerJump();
         }
 
         if (Input.GetButtonDown("Run"))
@@ -61,10 +65,18 @@ public class Controller : MonoBehaviour
         if (Input.GetButtonDown("Fight"))
         {
             animator.SetTrigger("Fight");
+            
+            // Play attack sound
+            if (AudioManager.Instance != null)
+                AudioManager.Instance.PlayPlayerAttack();
         }
         else if (Input.GetButtonDown("Specialskill"))
         {
             animator.SetTrigger("Specialskill");
+            
+            // Play attack sound (special)
+            if (AudioManager.Instance != null)
+                AudioManager.Instance.PlayPlayerAttack();
         }
         else if (Input.GetButtonDown("Shield"))
         {
@@ -89,6 +101,10 @@ public class Controller : MonoBehaviour
                 if (contact.normal.y > 0.5f)
                 {
                     grounded = true;
+                    
+                    // Play landing sound
+                    if (AudioManager.Instance != null && myBody.velocity.y < -2f)
+                        AudioManager.Instance.PlayPlayerLand();
                     break;
                 }
             }
@@ -108,6 +124,10 @@ public class Controller : MonoBehaviour
         if (collision.CompareTag("Trap"))
         {
             gameObject.GetComponent<CharacterStat>().TakeDamage(20);
+            
+            // Play trap sound
+            if (AudioManager.Instance != null)
+                AudioManager.Instance.PlayTrapActivate();
         }
     }
 }

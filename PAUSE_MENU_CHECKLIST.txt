@@ -1,0 +1,96 @@
+===============================================
+  PAUSE MENU - QUICK SETUP CHECKLIST
+===============================================
+
+📋 BƯỚC 1: KIỂM TRA CƠ BẢN
+☐ Scene có Canvas
+☐ Scene có EventSystem
+☐ PauseMenu.cs đã update (version mới)
+
+📋 BƯỚC 2: TẠO UI
+☐ Tạo PauseMenuPanel (Panel)
+  ☐ Thêm Title text
+  ☐ Thêm Resume button
+  ☐ Thêm Options button
+  ☐ Thêm Main Menu button
+  ☐ Thêm Quit button
+  ☐ Tắt panel (uncheck Active)
+
+☐ Tạo OptionsMenuPanel (Panel)
+  ☐ Thêm Title text
+  ☐ Thêm Back button
+  ☐ Thêm ScrollView
+  ☐ Copy controls text vào Content
+  ☐ Tắt panel (uncheck Active)
+
+📋 BƯỚC 3: SETUP SCRIPT
+☐ Tạo Empty GameObject: PauseMenuManager
+☐ Add PauseMenu component
+☐ Assign Pause Menu UI → PauseMenuPanel
+☐ Assign Options Menu UI → OptionsMenuPanel
+
+📋 BƯỚC 4: CONNECT BUTTONS
+☐ Resume Button → PauseMenu.Resume()
+☐ Options Button → PauseMenu.OpenOptions()
+☐ Main Menu Button → PauseMenu.LoadMainMenu()
+☐ Quit Button → PauseMenu.QuitGame()
+☐ Back Button (Options) → PauseMenu.CloseOptions()
+
+📋 BƯỚC 5: TEST
+☐ Play Scene
+☐ Nhấn ESC → Pause menu hiện
+☐ Click Options → Controls hiện
+☐ Nhấn ESC → Về pause menu
+☐ Nhấn ESC → Resume game
+☐ Test tất cả buttons
+
+📋 BƯỚC 6: BUILD TEST
+☐ File → Build Settings
+☐ Add tất cả Scenes
+☐ Build and Run
+☐ Test ESC trong build
+☐ Test tất cả buttons trong build
+
+===============================================
+  TROUBLESHOOTING
+===============================================
+
+❌ ESC không hoạt động?
+→ Check: PauseMenu script enabled
+→ Check: GameObject active
+→ Check: EventSystem có trong Scene
+
+❌ Pause menu không hiện?
+→ Check: pauseMenuUI assigned
+→ Check: Canvas có trong Scene
+→ Check: Panel không bị ẩn bởi layer khác
+
+❌ Buttons không click được?
+→ Check: EventSystem có
+→ Check: Button có Graphic Raycaster
+→ Check: OnClick() đã setup
+
+❌ Build game không hoạt động?
+→ Check: Scenes trong Build Settings
+→ Check: Scene index đúng
+→ Check: Input Manager có ESC
+
+===============================================
+  CONTROLS TEXT LOCATION
+===============================================
+
+File: CONTROLS_TEXT_TEMPLATE.txt
+→ Copy version bạn thích
+→ Paste vào Text trong OptionsMenuPanel
+
+===============================================
+  DONE! ✅
+===============================================
+
+Sau khi hoàn thành checklist:
+✓ ESC pause/unpause game
+✓ Options hiện controls
+✓ Tất cả buttons hoạt động
+✓ Build game chạy đúng
+
+===============================================

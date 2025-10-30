@@ -1,0 +1,181 @@
+===============================================
+  MENU SYSTEM - QUICK REFERENCE
+===============================================
+
+🏠 MAIN MENU (Scene: Main Menu)
+===============================================
+
+Buttons Setup:
+┌─────────────────────────────────────────┐
+│  PLAY Button                            │
+│  → OnClick: MainMenu.playGame()         │
+│  → Action: Load Scene 1 (gameplay)      │
+├─────────────────────────────────────────┤
+│  OPTIONS Button                         │
+│  → OnClick: MainMenu.ShowOptions()      │
+│  → Action: Show controls/guide          │
+├─────────────────────────────────────────┤
+│  SETTINGS Button                        │
+│  → OnClick: MainMenu.ShowSettings()     │
+│  → Action: Show audio settings          │
+├─────────────────────────────────────────┤
+│  EXIT Button                            │
+│  → OnClick: MainMenu.quitGame()         │
+│  → Action: Quit application             │
+└─────────────────────────────────────────┘
+
+Back Buttons (trong Options/Settings):
+→ OnClick: MainMenu.ShowMainMenu()
+
+
+⏸️ PAUSE MENU (Trong Gameplay)
+===============================================
+
+Trigger: Nhấn ESC
+
+Buttons Setup:
+┌─────────────────────────────────────────┐
+│  CONTINUE Button (Resume)               │
+│  → OnClick: PauseMenu.Resume()          │
+│  → Action: Tiếp tục game                │
+├─────────────────────────────────────────┤
+│  RESTART Button                         │
+│  → OnClick: PauseMenu.RestartLevel()    │
+│  → Action: Chơi lại level hiện tại      │
+├─────────────────────────────────────────┤
+│  OPTIONS Button                         │
+│  → OnClick: PauseMenu.OpenOptions()     │
+│  → Action: Show controls                │
+├─────────────────────────────────────────┤
+│  MAIN MENU Button                       │
+│  → OnClick: PauseMenu.LoadMainMenu()    │
+│  → Action: Về main menu (Scene 0)       │
+├─────────────────────────────────────────┤
+│  EXIT Button                            │
+│  → OnClick: PauseMenu.QuitGame()        │
+│  → Action: Quit application             │
+└─────────────────────────────────────────┘
+
+Back Button (trong Options):
+→ OnClick: PauseMenu.CloseOptions()
+
+
+📋 INSPECTOR ASSIGNMENTS
+===============================================
+
+Main Menu Scene:
+┌─────────────────────────────────────────┐
+│ MainMenu Component:                     │
+│  ☐ Main Menu Panel → MainMenuPanel     │
+│  ☐ Options Panel → OptionsPanel        │
+│  ☐ Settings Panel → SettingsPanel      │
+└─────────────────────────────────────────┘
+
+Gameplay Scenes:
+┌─────────────────────────────────────────┐
+│ PauseMenu Component:                    │
+│  ☐ Pause Menu UI → PauseMenuPanel      │
+│  ☐ Options Menu UI → OptionsMenuPanel  │
+└─────────────────────────────────────────┘
+
+
+🎨 PANEL STATES
+===============================================
+
+Main Menu Scene:
+  MainMenuPanel:    ✓ Active (default)
+  OptionsPanel:     ✗ Inactive
+  SettingsPanel:    ✗ Inactive
+
+Gameplay Scenes:
+  PauseMenuPanel:   ✗ Inactive (default)
+  OptionsMenuPanel: ✗ Inactive
+
+
+⌨️ KEYBOARD CONTROLS
+===============================================
+
+Main Menu:
+  ESC → Quit game (optional)
+  
+Gameplay:
+  ESC → Toggle Pause Menu
+  ESC (trong Options) → Back to Pause Menu
+  ESC (trong Pause) → Resume Game
+
+
+🔊 SOUND EFFECTS
+===============================================
+
+All Buttons:
+  → AudioManager.PlayButtonClick()
+  
+Menu Open:
+  → AudioManager.PlayMenuOpen()
+  
+Menu Close:
+  → AudioManager.PlayMenuClose()
+
+
+✅ TESTING CHECKLIST
+===============================================
+
+Main Menu:
+☐ PLAY → Load gameplay
+☐ OPTIONS → Show controls
+☐ SETTINGS → Show audio sliders
+☐ EXIT → Quit (test trong build)
+☐ BACK buttons work
+☐ Sounds play
+
+Pause Menu:
+☐ ESC → Pause game
+☐ Game freezes (Time.timeScale = 0)
+☐ CONTINUE → Resume
+☐ RESTART → Reload level
+☐ OPTIONS → Show controls
+☐ MAIN MENU → Load Scene 0
+☐ EXIT → Quit
+☐ ESC navigation works
+☐ Sounds play
+
+
+🐛 COMMON FIXES
+===============================================
+
+Buttons không click được:
+→ Add EventSystem to Scene
+
+ESC không hoạt động:
+→ Check PauseMenu script enabled
+→ Check pauseMenuUI assigned
+
+Game không unpause:
+→ Check Time.timeScale = 1f trong Resume()
+
+Panels không ẩn/hiện:
+→ Check panel assignments trong Inspector
+→ Check SetActive() calls
+
+
+📱 BUILD CHECKLIST
+===============================================
+
+☐ All Scenes added to Build Settings
+☐ Scene 0 = Main Menu
+☐ Scene 1+ = Gameplay levels
+☐ Test ESC trong build
+☐ Test all buttons trong build
+☐ Test scene transitions
+
+
+===============================================
+  DONE! 🎮
+===============================================
+
+Main Menu: PLAY, OPTIONS, SETTINGS, EXIT
+Pause Menu: CONTINUE, RESTART, OPTIONS, MAIN MENU, EXIT
+ESC: Pause/Unpause
+Sounds: All integrated
+
+===============================================
