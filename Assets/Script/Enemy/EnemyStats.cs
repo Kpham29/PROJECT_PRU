@@ -6,6 +6,7 @@ public class EnemyStats : MonoBehaviour
     [SerializeField] protected float health;
     [SerializeField] protected bool playDefaultSounds = true;
 
+
     [Header("Flash")]
     [SerializeField] private float flashDuration;
     [SerializeField, Range(0, 1)] private float flashStrength;
@@ -28,6 +29,7 @@ public class EnemyStats : MonoBehaviour
         if (damageCoroutine != null)
             StopCoroutine(Flash());
         damageCoroutine = StartCoroutine(Flash());
+
         
         // Play hurt sound (only if default sounds enabled)
         if (playDefaultSounds && AudioManager.Instance != null)
@@ -40,6 +42,11 @@ public class EnemyStats : MonoBehaviour
             // Play death sound (only if default sounds enabled)
             if (playDefaultSounds && AudioManager.Instance != null)
                 AudioManager.Instance.PlayEnemyDeath();
+
+        if (health <= 0)
+        {
+            DeathProcess();
+
         }
     }
 

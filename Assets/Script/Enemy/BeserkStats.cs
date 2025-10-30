@@ -5,6 +5,7 @@ using UnityEngine;
 public class BeserkStats : EnemyStats
 {
     [SerializeField] protected EnemyStateMachine enemyStateMachine;
+
     [SerializeField] private bool isBoss = true;
     
     private void Awake()
@@ -30,12 +31,17 @@ public class BeserkStats : EnemyStats
         if (isBoss && AudioManager.Instance != null)
             AudioManager.Instance.PlayBossHurt();
             
+
+    protected override void DamageProcess()
+    {
+
         base.DamageProcess();
     }
 
     protected override void DeathProcess()
     {
         enemyStateMachine.ChangeState(EnemyStateMachine.EnemyState.Death);
+
         
         // Play boss death sound and return to background music
         if (isBoss && AudioManager.Instance != null)
@@ -50,5 +56,6 @@ public class BeserkStats : EnemyStats
         yield return new WaitForSeconds(2f);
         if (AudioManager.Instance != null)
             AudioManager.Instance.PlayBackgroundMusic();
+
     }
 }

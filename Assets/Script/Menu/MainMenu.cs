@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+<<<<<<< HEAD
     [Header("Menu Panels")]
     [SerializeField] private GameObject mainMenuPanel;
     [SerializeField] private GameObject optionsPanel;
@@ -22,11 +23,16 @@ public class MainMenu : MonoBehaviour
         if (AudioManager.Instance != null)
             AudioManager.Instance.PlayButtonClick();
             
+=======
+    public void playGame()
+    {
+>>>>>>> origin/checkpoint-feature
         SceneManager.LoadScene(1);
     }
 
     public void quitGame()
     {
+<<<<<<< HEAD
         // Play button click sound
         if (AudioManager.Instance != null)
             AudioManager.Instance.PlayButtonClick();
@@ -82,4 +88,8 @@ public class MainMenu : MonoBehaviour
         if (AudioManager.Instance != null)
             AudioManager.Instance.PlaySFX(null, 0.3f);
     }
+=======
+        Application.Quit();
+    }
+>>>>>>> origin/checkpoint-feature
 }

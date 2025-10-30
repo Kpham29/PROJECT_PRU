@@ -27,18 +27,22 @@ public class CharacterStat : MonoBehaviour
             isDead = true;
             StartCoroutine(RemoveAfterAni());
             animator.SetTrigger("Die");
+
             
             // Play death sound
             if (AudioManager.Instance != null)
                 AudioManager.Instance.PlayPlayerDeath();
+
         }
         else
         {
             animator.SetTrigger("Hurt");
+
             
             // Play hurt sound
             if (AudioManager.Instance != null)
                 AudioManager.Instance.PlayPlayerHurt();
+
         }
     }
 
