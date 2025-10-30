@@ -21,11 +21,9 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         isInitialized = true;
     }
-
     void Update()
     {
         if (!isInitialized) return;
-
         // Khi nhấn Esc thì pause/unpause game
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -53,7 +51,6 @@ public class PauseMenu : MonoBehaviour
         // Play menu close sound
         if (AudioManager.Instance != null)
             AudioManager.Instance.PlayMenuClose();
-
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f; // resume game
         GameIsPaused = false;
@@ -61,9 +58,10 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
+        // Play menu open sound
         if (AudioManager.Instance != null)
             AudioManager.Instance.PlayMenuOpen();
-
+            
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f; // pause game
         GameIsPaused = true;
@@ -88,8 +86,7 @@ public class PauseMenu : MonoBehaviour
 
         Time.timeScale = 1f; // reset time scale trước khi load scene
         GameIsPaused = false;
-
-        SceneManager.LoadScene(0); // scene 0 = Main Menu
+       SceneManager.LoadScene(0); // scene 0 = Main Menu
     }
 
     public void QuitGame()
@@ -123,5 +120,6 @@ public class PauseMenu : MonoBehaviour
             optionsMenuUI.SetActive(false);
         if (pauseMenuUI != null)
             pauseMenuUI.SetActive(true);
+        Application.Quit();
     }
 }
