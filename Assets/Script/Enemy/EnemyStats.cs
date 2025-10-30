@@ -1,9 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
 {
     [SerializeField] protected float health;
+    [SerializeField] protected bool playDefaultSounds = true;
 
     [Header("Flash")]
     [SerializeField] private float flashDuration;
@@ -24,14 +25,25 @@ public class EnemyStats : MonoBehaviour
     {
         health -= damage;
         DamageProcess();
+
         if (damageCoroutine != null)
             StopCoroutine(Flash());
         damageCoroutine = StartCoroutine(Flash());
+
+        // Play hurt sound (only if default sounds enabled)
+        if (playDefaultSounds && AudioManager.Instance != null)
+            AudioManager.Instance.PlayEnemyHurt();
+
+        // Check death
         if (health <= 0)
         {
             DeathProcess();
-        }
-    }
+
+            // Play death sound (only if default sounds enabled)
+            if (playDefaultSounds && AudioManager.Instance != null)
+                AudioManager.Instance.PlayEnemyDeath();
+        } // ✅ đóng đúng khối if
+    } // ✅ đóng đúng hàm TakeDamage()
 
     protected virtual void DamageProcess() { }
 
@@ -46,6 +58,4 @@ public class EnemyStats : MonoBehaviour
         spriter.material = defaultMaterial;
         damageCoroutine = null;
     }
-
-
 }

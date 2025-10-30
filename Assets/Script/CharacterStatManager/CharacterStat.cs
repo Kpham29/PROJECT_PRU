@@ -10,6 +10,7 @@ public class CharacterStat : MonoBehaviour
 
     private int currentHealth;
     private Animator animator;
+    public bool isDead = false;
 
     void Start()
     {
@@ -23,17 +24,31 @@ public class CharacterStat : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            isDead = true;
             StartCoroutine(RemoveAfterAni());
             animator.SetTrigger("Die");
+
+            
+            // Play death sound
+            if (AudioManager.Instance != null)
+                AudioManager.Instance.PlayPlayerDeath();
+
         }
         else
         {
             animator.SetTrigger("Hurt");
+
+            
+            // Play hurt sound
+            if (AudioManager.Instance != null)
+                AudioManager.Instance.PlayPlayerHurt();
+
         }
     }
 
     public void Attack(CharacterStat stat)
     {
+        if (isDead) return;
         stat.TakeDamage(damage);
     }
 

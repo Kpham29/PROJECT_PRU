@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FollowObject : MonoBehaviour
 {
-    public Transform target;    // Nhân vật để follow
+    public GameObject target;    // Nhân vật để follow
     public float smoothSpeed = 0.125f; // tốc độ mượt
     public Vector3 offset;      // khoảng cách camera so với nhân vật
 
@@ -13,7 +13,7 @@ public class FollowObject : MonoBehaviour
         if (target == null) return;
 
         // Vị trí mong muốn
-        Vector3 desiredPosition = target.position + offset;
+        Vector3 desiredPosition = target.transform.position + offset;
 
         // Di chuyển mượt
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
