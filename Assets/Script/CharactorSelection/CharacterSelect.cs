@@ -110,7 +110,6 @@ public class CharacterSelect : MonoBehaviour
     {
         PlayerPrefs.SetInt("SelectedCharacter", selectedIndex);
         PlayerPrefs.Save();
-
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("TestScene");
     }
 }
