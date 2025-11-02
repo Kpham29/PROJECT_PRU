@@ -12,7 +12,7 @@ namespace Script.CharactorSelection
         // Start is called before the first frame update
         void Start()
         {
-            int index = PlayerPrefs.GetInt("SelectedCharacter", 0);
+            int index = PlayerPrefs.GetInt("SelectedCharacter", 1);
             GameObject character = Instantiate(characterPrefabs[index], spawnPoint.transform.position, Quaternion.identity);
             character.SetActive(true);
             if (camera != null)
