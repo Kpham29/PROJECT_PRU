@@ -8,7 +8,6 @@ public class BerserkAttack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-         
-        //collision.GetComponent<PlayerStats>().DamagePlayer(damage);
+        collision.GetComponent<CharacterStat>().TakeDamage((int)damage);
     }
 }

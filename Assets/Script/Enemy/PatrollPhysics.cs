@@ -31,7 +31,7 @@ public class PatrollPhysics : MonoBehaviour
     public bool playerBehind;
     public bool canCheckBehind = true;
     [SerializeField] private LayerMask playerDetectMask;
-
+        
 
     private void FixedUpdate()
     {
