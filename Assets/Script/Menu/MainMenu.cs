@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -38,6 +38,8 @@ public class MainMenu : MonoBehaviour
 
     public void ShowOptions()
     {
+        Debug.Log("ShowOptions() called");
+        
         // Play button click sound
         if (AudioManager.Instance != null)
             AudioManager.Instance.PlayButtonClick();
@@ -52,6 +54,8 @@ public class MainMenu : MonoBehaviour
 
     public void ShowSettings()
     {
+        Debug.Log("ShowSettings() called");
+        
         // Play button click sound
         if (AudioManager.Instance != null)
             AudioManager.Instance.PlayButtonClick();

@@ -1,9 +1,13 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using System.Collections;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
+
+    [Header("------------ Audio Mixer ------------")]
+    [SerializeField] private AudioMixer audioMixer;
 
     [Header("------------ Audio Source ------------")]
     [SerializeField] private AudioSource musicSource;
@@ -245,22 +249,48 @@ public class AudioManager : MonoBehaviour
     public void SetMusicVolume(float volume)
     {
         musicVolume = Mathf.Clamp01(volume);
-        if (musicSource != null)
+        
+        // Use Audio Mixer if available, otherwise fallback to direct volume control
+        if (audioMixer != null)
+        {
+            // Convert 0-1 to decibels (-80 to 0)
+            float db = volume > 0 ? 20f * Mathf.Log10(volume) : -80f;
+            audioMixer.SetFloat("MusicVolume", db);
+        }
+        else if (musicSource != null)
+        {
             musicSource.volume = musicVolume;
+        }
     }
 
     public void SetSFXVolume(float volume)
     {
         sfxVolume = Mathf.Clamp01(volume);
-        if (sfxSource != null)
+        
+        if (audioMixer != null)
+        {
+            float db = volume > 0 ? 20f * Mathf.Log10(volume) : -80f;
+            audioMixer.SetFloat("SFXVolume", db);
+        }
+        else if (sfxSource != null)
+        {
             sfxSource.volume = sfxVolume;
+        }
     }
 
     public void SetAmbientVolume(float volume)
     {
         ambientVolume = Mathf.Clamp01(volume);
-        if (ambientSource != null)
+        
+        if (audioMixer != null)
+        {
+            float db = volume > 0 ? 20f * Mathf.Log10(volume) : -80f;
+            audioMixer.SetFloat("AmbientVolume", db);
+        }
+        else if (ambientSource != null)
+        {
             ambientSource.volume = ambientVolume;
+        }
     }
 
     public float GetMusicVolume() => musicVolume;
