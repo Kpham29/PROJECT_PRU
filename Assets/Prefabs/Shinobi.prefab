@@ -247,6 +247,7 @@ MonoBehaviour:
   maxHealth: 120
   damage: 15
   isDead: 0
+
 --- !u!60 &3964562537773117706
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -290,3 +291,4 @@ PolygonCollider2D:
       - {x: -0.01, y: -0.275}
       - {x: -0.01, y: -0.39499998}
       - {x: 0.14999999, y: -0.39499998}
+
