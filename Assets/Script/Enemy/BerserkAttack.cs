@@ -7,7 +7,10 @@ public class BerserkAttack : MonoBehaviour
     [SerializeField] private float damage;
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {
-        collision.GetComponent<CharacterStat>().TakeDamage((int)damage);
+    {       
+        if (collision.CompareTag("Player"))
+        {
+            collision.GetComponent<CharacterStat>().TakeDamage((int)damage);
+        }
     }
 }

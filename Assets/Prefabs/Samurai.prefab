@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1780662277450742312}
   - component: {fileID: 1780662277450742315}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 0
 --- !u!4 &1780662277450742312
 Transform:
@@ -79,7 +79,7 @@ GameObject:
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1780662278422656648
 Transform:
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   runSpeed: 5
-  jumpHeight: 7
+  jumpHeight: 8
 --- !u!50 &1780662278422656652
 Rigidbody2D:
   serializedVersion: 4

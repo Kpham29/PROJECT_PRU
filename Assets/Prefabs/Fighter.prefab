@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 5086874803411672389}
   - component: {fileID: 5086874803411672388}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Fist
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 0
 --- !u!4 &5086874803411672389
 Transform:
@@ -79,7 +79,7 @@ GameObject:
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5086874804637090955
 Transform:
@@ -135,9 +135,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingLayerID: -1713825457
+  m_SortingLayer: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: 711128952, guid: cea5707f574594d4ea2376abdeacb97f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   runSpeed: 5
-  jumpHeight: 7
+  jumpHeight: 8
 --- !u!50 &5086874804637090959
 Rigidbody2D:
   serializedVersion: 4

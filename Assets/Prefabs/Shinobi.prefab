@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1399516599085304426}
   - component: {fileID: 1399516599085304427}
   - component: {fileID: 9019761078299221014}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Kunai
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,13 +86,13 @@ GameObject:
   - component: {fileID: 1399516600266840164}
   - component: {fileID: 1399516600266840174}
   - component: {fileID: 1136218475594396710}
-  - component: {fileID: 3964562537773117706}
+  - component: {fileID: 7242856750435834281}
   m_Layer: 7
   m_Name: Shinobi
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1399516600266840175
 Transform:
@@ -148,9 +148,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingLayerID: -1713825457
+  m_SortingLayer: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: 2047718751, guid: 04a39d5c4f48bf14ca0f34286469b325, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   runSpeed: 5
-  jumpHeight: 7
+  jumpHeight: 8
 --- !u!50 &1399516600266840171
 Rigidbody2D:
   serializedVersion: 4
@@ -196,7 +196,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!114 &1399516600266840164
 MonoBehaviour:
@@ -247,8 +247,7 @@ MonoBehaviour:
   maxHealth: 120
   damage: 15
   isDead: 0
-
---- !u!60 &3964562537773117706
+--- !u!60 &7242856750435834281
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -273,22 +272,70 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.17, y: -0.205}
-      - {x: 0.12, y: -0.035}
+    - - {x: -0.07, y: -0.295}
+      - {x: -0.03, y: -0.24499999}
+      - {x: -0.02, y: -0.24499999}
+      - {x: 0, y: -0.265}
+      - {x: 0, y: -0.315}
+      - {x: -0.01, y: -0.325}
+      - {x: -0.01, y: -0.39499998}
+      - {x: 0.13, y: -0.39499998}
+      - {x: 0.13, y: -0.385}
+      - {x: 0.08, y: -0.345}
+      - {x: 0.089999996, y: -0.285}
+      - {x: 0.12, y: -0.24499999}
+      - {x: 0.12, y: -0.21499999}
+      - {x: 0.13, y: -0.205}
+      - {x: 0.13, y: -0.125}
+      - {x: 0.12, y: -0.114999995}
+      - {x: 0.12, y: -0.074999996}
+      - {x: 0.11, y: -0.065}
+      - {x: 0.11, y: -0.035}
+      - {x: 0.099999994, y: -0.024999999}
+      - {x: 0.099999994, y: 0.005}
+      - {x: 0.089999996, y: 0.015}
+      - {x: 0.14999999, y: 0.015}
       - {x: 0.17999999, y: 0.035}
       - {x: 0.17999999, y: 0.095}
       - {x: 0.14999999, y: 0.125}
-      - {x: 0.13, y: 0.205}
-      - {x: 0.089999996, y: 0.385}
-      - {x: 0.08, y: 0.39499998}
-      - {x: -0.12, y: 0.39499998}
-      - {x: -0.17999999, y: 0.325}
-      - {x: -0.17999999, y: 0.205}
-      - {x: -0.17, y: 0.125}
-      - {x: -0.17999999, y: 0.074999996}
+      - {x: 0.11, y: 0.125}
+      - {x: 0.08, y: 0.145}
+      - {x: 0.06, y: 0.155}
+      - {x: 0.07, y: 0.175}
+      - {x: 0.089999996, y: 0.195}
+      - {x: 0.11, y: 0.205}
+      - {x: 0.11, y: 0.275}
+      - {x: 0.08, y: 0.33499998}
+      - {x: 0.08, y: 0.375}
+      - {x: 0.06, y: 0.39499998}
+      - {x: -0.099999994, y: 0.39499998}
+      - {x: -0.13, y: 0.36499998}
+      - {x: -0.12, y: 0.345}
+      - {x: -0.16, y: 0.33499998}
+      - {x: -0.17999999, y: 0.305}
+      - {x: -0.17999999, y: 0.295}
+      - {x: -0.16, y: 0.275}
+      - {x: -0.17999999, y: 0.255}
+      - {x: -0.17999999, y: 0.235}
+      - {x: -0.16, y: 0.21499999}
+      - {x: -0.16, y: 0.175}
+      - {x: -0.13, y: 0.145}
+      - {x: -0.11, y: 0.155}
+      - {x: -0.099999994, y: 0.145}
+      - {x: -0.12, y: 0.145}
+      - {x: -0.14999999, y: 0.114999995}
+      - {x: -0.16, y: 0.035}
+      - {x: -0.17, y: 0.024999999}
+      - {x: -0.17, y: -0.005}
+      - {x: -0.17999999, y: -0.015}
+      - {x: -0.17999999, y: -0.205}
+      - {x: -0.17, y: -0.21499999}
+      - {x: -0.16, y: -0.255}
+      - {x: -0.17, y: -0.265}
+      - {x: -0.17, y: -0.305}
+      - {x: -0.17999999, y: -0.315}
       - {x: -0.17999999, y: -0.39499998}
-      - {x: -0.049999997, y: -0.39499998}
-      - {x: -0.01, y: -0.275}
-      - {x: -0.01, y: -0.39499998}
-      - {x: 0.14999999, y: -0.39499998}
-
+      - {x: -0.07, y: -0.39499998}
+      - {x: -0.07, y: -0.375}
+      - {x: -0.089999996, y: -0.355}
+      - {x: -0.089999996, y: -0.325}

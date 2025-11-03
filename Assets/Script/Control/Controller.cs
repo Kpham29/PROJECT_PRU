@@ -54,7 +54,7 @@ public class Controller : MonoBehaviour
             myBody.velocity = new Vector2(myBody.velocity.x, jumpHeight);
             animator.SetTrigger("Jump");
 
-            
+
             // Play jump sound
             if (AudioManager.Instance != null)
                 AudioManager.Instance.PlayPlayerJump();
@@ -70,7 +70,7 @@ public class Controller : MonoBehaviour
         {
             animator.SetTrigger("Fight");
 
-            
+
             // Play attack sound
             if (AudioManager.Instance != null)
                 AudioManager.Instance.PlayPlayerAttack();
@@ -80,7 +80,7 @@ public class Controller : MonoBehaviour
         {
             animator.SetTrigger("Specialskill");
 
-            
+
             // Play attack sound (special)
             if (AudioManager.Instance != null)
                 AudioManager.Instance.PlayPlayerAttack();
@@ -110,7 +110,7 @@ public class Controller : MonoBehaviour
                 {
                     grounded = true;
 
-                    
+
                     // Play landing sound
                     if (AudioManager.Instance != null && myBody.velocity.y < -2f)
                         AudioManager.Instance.PlayPlayerLand();
@@ -135,7 +135,7 @@ public class Controller : MonoBehaviour
         {
             gameObject.GetComponent<CharacterStat>().TakeDamage(20);
 
-            
+
             // Play trap sound
             if (AudioManager.Instance != null)
                 AudioManager.Instance.PlayTrapActivate();

@@ -18,6 +18,7 @@ public class WeaponBehaviour : MonoBehaviour
             if (stat != null && player != null)
             {
                 stat.TakeDamage(player.damage);
+                Debug.Log("danh trung");
             }
         }
     }
