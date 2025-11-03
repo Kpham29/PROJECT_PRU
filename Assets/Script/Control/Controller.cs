@@ -1,7 +1,4 @@
-
-﻿using System.Collections;
-
-using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 public class Controller : MonoBehaviour
@@ -9,25 +6,37 @@ public class Controller : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private float runSpeed;
     [SerializeField] private float jumpHeight;
-
     private Rigidbody2D myBody;
     private Animator animator;
     private bool grounded;
     private bool faceInRight;
     private bool isRunning;
+    private CharacterStat characterStat;
+    private Vector3 initialSpawnPoint;
+    private Quaternion initialSpawnRotation;
+    private Vector3 respawnPosition;
+    private Quaternion respawnRotation;
+    private bool hasCheckpoint = false;
 
     void Start()
     {
         myBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        characterStat = GetComponent<CharacterStat>();
         faceInRight = true;
         grounded = true;
         isRunning = false;
+        initialSpawnPoint = transform.position;
+        initialSpawnRotation = transform.rotation;
+        respawnPosition = initialSpawnPoint;
+        respawnRotation = initialSpawnRotation;
+        FollowObject.SetTarget(gameObject); // Gán target ngay khi khởi tạo
+        Debug.Log("Controller: Set target to " + gameObject.name);
     }
 
     void FixedUpdate()
     {
-        if (gameObject.GetComponent<CharacterStat>().isDead) return;
+        if (characterStat.isDead) return;
         float move = Input.GetAxis("Horizontal");
         float speed = isRunning ? runSpeed : moveSpeed;
         myBody.velocity = new Vector2(move * speed, myBody.velocity.y);
@@ -46,45 +55,35 @@ public class Controller : MonoBehaviour
 
     void Update()
     {
-        if (gameObject.GetComponent<CharacterStat>().isDead) return;
+        if (characterStat.isDead)
+        {
+            StartCoroutine(Respawn());
+            return;
+        }
         animator.SetBool("IsGrounded", grounded);
         if (Input.GetButtonDown("Jump") && grounded)
         {
             grounded = false;
             myBody.velocity = new Vector2(myBody.velocity.x, jumpHeight);
             animator.SetTrigger("Jump");
-
-
-            // Play jump sound
             if (AudioManager.Instance != null)
                 AudioManager.Instance.PlayPlayerJump();
-
         }
-
         if (Input.GetButtonDown("Run"))
         {
             isRunning = !isRunning;
         }
-
         if (Input.GetButtonDown("Fight"))
         {
             animator.SetTrigger("Fight");
-
-
-            // Play attack sound
             if (AudioManager.Instance != null)
                 AudioManager.Instance.PlayPlayerAttack();
-
         }
         else if (Input.GetButtonDown("Specialskill"))
         {
             animator.SetTrigger("Specialskill");
-
-
-            // Play attack sound (special)
             if (AudioManager.Instance != null)
                 AudioManager.Instance.PlayPlayerAttack();
-
         }
         else if (Input.GetButtonDown("Shield"))
         {
@@ -109,12 +108,8 @@ public class Controller : MonoBehaviour
                 if (contact.normal.y > 0.5f)
                 {
                     grounded = true;
-
-
-                    // Play landing sound
                     if (AudioManager.Instance != null && myBody.velocity.y < -2f)
                         AudioManager.Instance.PlayPlayerLand();
-
                     break;
                 }
             }
@@ -133,13 +128,53 @@ public class Controller : MonoBehaviour
     {
         if (collision.CompareTag("Trap"))
         {
-            gameObject.GetComponent<CharacterStat>().TakeDamage(20);
-
-
-            // Play trap sound
+            characterStat.TakeDamage(20);
             if (AudioManager.Instance != null)
                 AudioManager.Instance.PlayTrapActivate();
-
         }
+    }
+
+    public void SetCheckpoint(Vector3 position, Quaternion rotation)
+    {
+        respawnPosition = position;
+        respawnRotation = rotation;
+        hasCheckpoint = true;
+        Debug.Log($"Checkpoint saved at {position}");
+    }
+
+    public void SetInitialSpawnPoint(Vector3 position, Quaternion rotation)
+    {
+        initialSpawnPoint = position;
+        initialSpawnRotation = rotation;
+        respawnPosition = initialSpawnPoint;
+        respawnRotation = initialSpawnRotation;
+        hasCheckpoint = false;
+        Debug.Log($"Initial spawn point set at {position}");
+    }
+
+    private IEnumerator Respawn()
+    {
+        float length = animator.GetCurrentAnimatorClipInfo(0).Length;
+        yield return new WaitForSeconds(length);
+        transform.position = hasCheckpoint ? respawnPosition : initialSpawnPoint;
+        transform.rotation = hasCheckpoint ? respawnRotation : initialSpawnRotation;
+        var rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.velocity = Vector2.zero;
+            rb.angularVelocity = 0;
+        }
+        characterStat.RestoreHealth();
+        grounded = true;
+        isRunning = false;
+        animator.SetBool("IsGrounded", grounded);
+        animator.SetFloat("Speed", 0);
+        animator.SetBool("IsRunning", false);
+        if (!faceInRight)
+        {
+            Flip();
+        }
+        FollowObject.SetTarget(gameObject); // Cập nhật target sau respawn
+        Debug.Log($"Player respawned at {(hasCheckpoint ? "checkpoint" : "initial spawn point")}. Target updated to " + gameObject.name);
     }
 }
