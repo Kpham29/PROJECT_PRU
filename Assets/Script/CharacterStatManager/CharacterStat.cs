@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterStat : MonoBehaviour
@@ -7,7 +6,6 @@ public class CharacterStat : MonoBehaviour
     [Header("Stat")]
     [SerializeField] public int maxHealth;
     [SerializeField] public int damage;
-
     private int currentHealth;
     private Animator animator;
     public bool isDead = false;
@@ -20,29 +18,21 @@ public class CharacterStat : MonoBehaviour
 
     public void TakeDamage(int dame)
     {
+        if (isDead) return;
         currentHealth -= dame;
 
         if (currentHealth <= 0)
         {
             isDead = true;
-            StartCoroutine(RemoveAfterAni());
             animator.SetTrigger("Die");
-
-            
-            // Play death sound
             if (AudioManager.Instance != null)
                 AudioManager.Instance.PlayPlayerDeath();
-
         }
         else
         {
             animator.SetTrigger("Hurt");
-
-            
-            // Play hurt sound
             if (AudioManager.Instance != null)
                 AudioManager.Instance.PlayPlayerHurt();
-
         }
     }
 
@@ -52,11 +42,11 @@ public class CharacterStat : MonoBehaviour
         stat.TakeDamage(damage);
     }
 
-    private IEnumerator RemoveAfterAni()
+    public void RestoreHealth()
     {
-        float length = animator.GetCurrentAnimatorClipInfo(0).Length;
-        yield return new WaitForSeconds(length);
-
-        Destroy(gameObject);
+        currentHealth = maxHealth;
+        isDead = false;
+        animator.ResetTrigger("Die");
+        animator.ResetTrigger("Hurt");
     }
 }

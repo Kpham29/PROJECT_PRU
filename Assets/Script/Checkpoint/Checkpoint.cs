@@ -15,10 +15,13 @@ public class Checkpoint : MonoBehaviour
         if (collision.CompareTag("Player") && !activated)
         {
             activated = true;
-            CheckpointManager.Instance.SetCheckpoint(transform.position, transform.rotation);
+            Controller controller = collision.GetComponent<Controller>();
+            if (controller != null)
+            {
+                controller.SetCheckpoint(transform.position, transform.rotation);
+            }
             Debug.Log("Checkpoint activated!");
 
-            // Option: đổi màu hoặc hiệu ứng khi được kích hoạt
             var sr = GetComponent<SpriteRenderer>();
             if (sr != null) sr.color = Color.green;
         }

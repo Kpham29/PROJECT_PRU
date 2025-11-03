@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Tilemaps;
+﻿using UnityEngine;
 
 public class StageManager : MonoBehaviour
 {
@@ -14,18 +11,23 @@ public class StageManager : MonoBehaviour
         currentMap.SetActive(true);
     }
 
-    public void OnTriggerEnter2D(Collider2D collider)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.CompareTag("Player"))
         {
             currentMap.SetActive(false);
             nextMap.SetActive(true);
-
-            if(startPoint != null)
+            if (startPoint != null)
             {
                 collider.transform.position = startPoint.position;
+                Controller controller = collider.GetComponent<Controller>();
+                if (controller != null)
+                {
+                    controller.SetInitialSpawnPoint(startPoint.position, Quaternion.identity);
+                }
+                FollowObject.SetTarget(collider.gameObject); // Cập nhật target khi chuyển map
+                Debug.Log("StageManager: Camera target updated to " + collider.gameObject.name);
             }
         }
-        
     }
 }
