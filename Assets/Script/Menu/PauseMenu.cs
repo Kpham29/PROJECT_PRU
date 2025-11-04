@@ -61,10 +61,17 @@ public class PauseMenu : MonoBehaviour
         // Play menu open sound
         if (AudioManager.Instance != null)
             AudioManager.Instance.PlayMenuOpen();
-            
-        pauseMenuUI.SetActive(true);
+
+        pauseMenuUI.SetActive(true); // <-- CHỈ BẬT PANEL NÀY LÊN
         Time.timeScale = 0f; // pause game
+        AudioListener.pause = true; // <-- THÊM VÀO: Tạm dừng tất cả âm thanh
         GameIsPaused = true;
+
+        // <-- XÓA CÁC DÒNG GÂY LỖI BÊN DƯỚI NÀY
+        // if (pauseMenuUI != null)
+        //     pauseMenuUI.SetActive(false);
+        // if (optionsMenuUI != null)
+        //     optionsMenuUI.SetActive(true);
     }
 
     public void RestartLevel()
