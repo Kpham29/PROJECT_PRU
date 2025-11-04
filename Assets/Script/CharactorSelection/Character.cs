@@ -11,7 +11,6 @@ namespace Script.CharactorSelection
 
         public GameObject mainCamera;
 
-        // 🩸 Thêm 2 dòng này để gán HealthBar UI
         [Header("UI References")]
         public HealthBar healthBarPrefab;
         public Transform canvasTransform;
@@ -27,11 +26,10 @@ namespace Script.CharactorSelection
                 character.tag = "Player";
                 DontDestroyOnLoad(character);
 
-                // 🧠 Tạo HealthBar cho nhân vật
                 if (healthBarPrefab != null && canvasTransform != null)
                 {
                     HealthBar hb = Instantiate(healthBarPrefab, canvasTransform);
-                    CharacterStat stat = character.GetComponent<CharacterStat>();
+                    MainCharacterStat stat = character.GetComponent<MainCharacterStat>();
                     if (stat != null)
                     {
                         stat.SetHealthBar(hb);

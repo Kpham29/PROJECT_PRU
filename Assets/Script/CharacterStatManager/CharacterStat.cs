@@ -8,25 +8,15 @@ public class CharacterStat : MonoBehaviour
     [SerializeField] public int maxHealth = 100;
     [SerializeField] public int damage = 10;
 
-    private int currentHealth;
-    private Animator animator;
+    public int currentHealth;
+    protected Animator animator;
     public bool isDead = false;
 
-    private HealthBar healthBar; // 👈 Thêm tham chiếu tới thanh máu
-
-    void Start()
+    protected virtual void Start()
 
     {
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
-        UpdateHealthUI();
-    }
-
-    // 👇 Cho phép script khác (như Character.cs) gán thanh máu
-    public void SetHealthBar(HealthBar hb)
-    {
-        healthBar = hb;
-        UpdateHealthUI();
     }
 
     public virtual void TakeDamage(int dame)
@@ -37,7 +27,6 @@ public class CharacterStat : MonoBehaviour
         if (currentHealth < 0)
             currentHealth = 0;
 
-        UpdateHealthUI();
 
         if (currentHealth <= 0)
         {
@@ -66,14 +55,5 @@ public class CharacterStat : MonoBehaviour
         isDead = false;
         animator.ResetTrigger("Die");
         animator.ResetTrigger("Hurt");
-        UpdateHealthUI();
-    }
-
-    private void UpdateHealthUI()
-    {
-        if (healthBar != null)
-        {
-            healthBar.UpdateBar(currentHealth, maxHealth);
-        }
     }
 }
