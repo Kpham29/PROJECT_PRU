@@ -6,17 +6,17 @@ public class CharacterStat : MonoBehaviour
     [Header("Stat")]
     [SerializeField] public int maxHealth;
     [SerializeField] public int damage;
-    private int currentHealth;
-    private Animator animator;
+    public int currentHealth;
+    protected Animator animator;
     public bool isDead = false;
 
-    void Start()
+    protected virtual void Start()
     {
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
     }
 
-    public void TakeDamage(int dame)
+    public virtual void TakeDamage(int dame)
     {
         if (isDead) return;
         currentHealth -= dame;
@@ -36,13 +36,13 @@ public class CharacterStat : MonoBehaviour
         }
     }
 
-    public void Attack(CharacterStat stat)
+    public virtual void Attack(CharacterStat stat)
     {
         if (isDead) return;
         stat.TakeDamage(damage);
     }
 
-    public void RestoreHealth()
+    public virtual void RestoreHealth()
     {
         currentHealth = maxHealth;
         isDead = false;

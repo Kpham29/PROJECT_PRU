@@ -6,7 +6,7 @@ namespace Script.CharactorSelection
     {
         public GameObject[] characterPrefabs;
         public GameObject spawnPoint;
-        public GameObject mainCamera; // Cần gán trong Inspector
+        public GameObject mainCamera; 
 
         void Start()
         {

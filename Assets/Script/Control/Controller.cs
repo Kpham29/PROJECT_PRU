@@ -11,7 +11,7 @@ public class Controller : MonoBehaviour
     private bool grounded;
     private bool faceInRight;
     private bool isRunning;
-    private CharacterStat characterStat;
+    private MainCharacterStat characterStat;
     private Vector3 initialSpawnPoint;
     private Quaternion initialSpawnRotation;
     private Vector3 respawnPosition;
@@ -22,7 +22,7 @@ public class Controller : MonoBehaviour
     {
         myBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        characterStat = GetComponent<CharacterStat>();
+        characterStat = GetComponent<MainCharacterStat>();
         faceInRight = true;
         grounded = true;
         isRunning = false;
@@ -30,7 +30,7 @@ public class Controller : MonoBehaviour
         initialSpawnRotation = transform.rotation;
         respawnPosition = initialSpawnPoint;
         respawnRotation = initialSpawnRotation;
-        FollowObject.SetTarget(gameObject); // Gán target ngay khi khởi tạo
+        FollowObject.SetTarget(gameObject); 
         Debug.Log("Controller: Set target to " + gameObject.name);
     }
 
@@ -57,7 +57,7 @@ public class Controller : MonoBehaviour
     {
         if (characterStat.isDead)
         {
-            StartCoroutine(Respawn());
+            StartCoroutine(characterStat.WaitForDeathAnimationAndRespawn());
             return;
         }
         animator.SetBool("IsGrounded", grounded);
@@ -152,7 +152,7 @@ public class Controller : MonoBehaviour
         Debug.Log($"Initial spawn point set at {position}");
     }
 
-    private IEnumerator Respawn()
+    public IEnumerator Respawn()
     {
         float length = animator.GetCurrentAnimatorClipInfo(0).Length;
         yield return new WaitForSeconds(length);
@@ -176,5 +176,20 @@ public class Controller : MonoBehaviour
         }
         FollowObject.SetTarget(gameObject); // Cập nhật target sau respawn
         Debug.Log($"Player respawned at {(hasCheckpoint ? "checkpoint" : "initial spawn point")}. Target updated to " + gameObject.name);
+    }
+
+    public void StopImmediately()
+    {
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.velocity = Vector2.zero;
+        }
+
+        Animator anim = GetComponent<Animator>();
+        if (anim != null)
+        {
+            anim.SetFloat("Speed", 0f);
+        }
     }
 }

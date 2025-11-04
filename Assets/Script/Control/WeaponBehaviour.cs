@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class WeaponBehaviour : MonoBehaviour
 {
-    private CharacterStat player;
+    private MainCharacterStat player;
 
     void Start()
     {
-        player = GetComponentInParent<CharacterStat>();
+        player = GetComponentInParent<MainCharacterStat>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
