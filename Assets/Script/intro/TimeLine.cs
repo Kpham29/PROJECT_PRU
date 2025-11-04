@@ -14,7 +14,6 @@ public class TimeLine : MonoBehaviour
     private float holdTime = 3f;
     private float currentHoldTime = 0f;
     private bool isHolding = false;
-    private float maxFillAmount = 1f;
 
     // Start is called before the first frame update
     void Start()
