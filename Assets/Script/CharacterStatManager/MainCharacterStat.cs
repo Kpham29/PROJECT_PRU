@@ -12,6 +12,8 @@ public class MainCharacterStat : CharacterStat
         controller = GetComponent<Controller>();
     }
 
+
+
     public override void TakeDamage(int dame)
     {
         base.TakeDamage(dame);

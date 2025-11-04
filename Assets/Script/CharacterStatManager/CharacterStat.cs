@@ -9,18 +9,18 @@ public class CharacterStat : MonoBehaviour
     [SerializeField] public int damage = 10;
 
     private int currentHealth;
-    private Animator animator;
+    protected Animator animator;
     public bool isDead = false;
 
     private HealthBar healthBar; // 👈 Thêm tham chiếu tới thanh máu
 
-    void Start()
+    protected virtual void Start()
+{
+    animator = GetComponent<Animator>();
+    currentHealth = maxHealth;
+    UpdateHealthUI();
+}
 
-    {
-        animator = GetComponent<Animator>();
-        currentHealth = maxHealth;
-        UpdateHealthUI();
-    }
 
     // 👇 Cho phép script khác (như Character.cs) gán thanh máu
     public void SetHealthBar(HealthBar hb)
