@@ -56,7 +56,7 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
     }
 
-    void Pause()
+    public void Pause()
     {
         // Play menu open sound
         if (AudioManager.Instance != null)

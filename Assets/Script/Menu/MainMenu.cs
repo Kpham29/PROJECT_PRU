@@ -24,7 +24,7 @@ public class MainMenu : MonoBehaviour
             AudioManager.Instance.PlayButtonClick();
 
         // ✅ Đoạn dưới đây là phần lặp bị lỗi — đã fix bằng cách giữ lại 1 hàm duy nhất.
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     public void quitGame()
