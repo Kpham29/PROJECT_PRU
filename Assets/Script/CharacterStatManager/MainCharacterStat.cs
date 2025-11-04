@@ -5,11 +5,13 @@ using UnityEngine;
 public class MainCharacterStat : CharacterStat
 {
     private Controller controller;
+    private HealthBar healthBar;
 
     protected override void Start()
     {
         base.Start();
         controller = GetComponent<Controller>();
+        UpdateHealthUI();
     }
 
 
@@ -17,7 +19,7 @@ public class MainCharacterStat : CharacterStat
     public override void TakeDamage(int dame)
     {
         base.TakeDamage(dame);
-
+        UpdateHealthUI();
         if (isDead)
         {
             if (controller != null)
@@ -27,6 +29,12 @@ public class MainCharacterStat : CharacterStat
             }
             StartCoroutine(WaitForDeathAnimationAndRespawn());
         }
+    }
+
+    public override void RestoreHealth()
+    {
+        base.RestoreHealth();
+        UpdateHealthUI();
     }
 
     public IEnumerator WaitForDeathAnimationAndRespawn()
@@ -46,5 +54,19 @@ public class MainCharacterStat : CharacterStat
 
         if (controller != null)
             controller.enabled = true;
+    }
+
+    public virtual void SetHealthBar(HealthBar hb)
+    {
+        healthBar = hb;
+        UpdateHealthUI();
+    }
+
+    private void UpdateHealthUI()
+    {
+        if (healthBar != null)
+        {
+            healthBar.UpdateBar(currentHealth, maxHealth);
+        }
     }
 }
