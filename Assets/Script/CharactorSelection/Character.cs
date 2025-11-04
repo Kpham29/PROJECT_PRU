@@ -8,12 +8,14 @@ namespace Script.CharactorSelection
     {
         public GameObject[] characterPrefabs;
         public GameObject spawnPoint;
+
         public GameObject mainCamera;
 
         // 🩸 Thêm 2 dòng này để gán HealthBar UI
         [Header("UI References")]
         public HealthBar healthBarPrefab;
         public Transform canvasTransform;
+
 
         void Start()
         {

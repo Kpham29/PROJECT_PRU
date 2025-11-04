@@ -85,8 +85,8 @@ GameObject:
   - component: {fileID: 1399516600266840171}
   - component: {fileID: 1399516600266840164}
   - component: {fileID: 1399516600266840174}
-  - component: {fileID: 1136218475594396710}
   - component: {fileID: 7242856750435834281}
+  - component: {fileID: 5196275074589422449}
   m_Layer: 7
   m_Name: Shinobi
   m_TagString: Player
@@ -232,21 +232,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1136218475594396710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399516600266840165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de2e6bb6c95a3374bb71a76d16797e42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 120
-  damage: 15
-  isDead: 0
 --- !u!60 &7242856750435834281
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -339,3 +324,19 @@ PolygonCollider2D:
       - {x: -0.07, y: -0.375}
       - {x: -0.089999996, y: -0.355}
       - {x: -0.089999996, y: -0.325}
+--- !u!114 &5196275074589422449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399516600266840165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05b105c09a579654285f4bcf2c97d5d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 160
+  damage: 18
+  currentHealth: 0
+  isDead: 0

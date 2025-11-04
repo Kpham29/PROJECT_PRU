@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5086874803411672389}
   - component: {fileID: 5086874803411672388}
+  - component: {fileID: 3071808216012056782}
   m_Layer: 0
   m_Name: Fist
   m_TagString: Untagged
@@ -58,6 +59,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &3071808216012056782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5086874803411672390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 393c1ef27e7b2b340b3df3cf7d241223, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5086874804637090949
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,8 +85,8 @@ GameObject:
   - component: {fileID: 5086874804637090952}
   - component: {fileID: 5086874804637090959}
   - component: {fileID: 5086874804637090958}
-  - component: {fileID: 6028061564971734342}
   - component: {fileID: 3280974419246659833}
+  - component: {fileID: -1824918530293216412}
   m_Layer: 7
   m_Name: Fighter
   m_TagString: Player
@@ -219,21 +232,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 5086874803411672390}
---- !u!114 &6028061564971734342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5086874804637090949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de2e6bb6c95a3374bb71a76d16797e42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 180
-  damage: 18
-  isDead: 0
 --- !u!60 &3280974419246659833
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -272,3 +270,19 @@ PolygonCollider2D:
       - {x: 0.14999999, y: -0.405}
       - {x: 0.14999999, y: 0.015}
       - {x: 0.11, y: 0.155}
+--- !u!114 &-1824918530293216412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5086874804637090949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05b105c09a579654285f4bcf2c97d5d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 180
+  damage: 15
+  currentHealth: 0
+  isDead: 0

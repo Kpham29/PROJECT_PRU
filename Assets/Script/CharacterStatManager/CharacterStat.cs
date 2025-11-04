@@ -4,6 +4,7 @@ using UnityEngine;
 public class CharacterStat : MonoBehaviour
 {
     [Header("Stat")]
+
     [SerializeField] public int maxHealth = 100;
     [SerializeField] public int damage = 10;
 
@@ -14,6 +15,7 @@ public class CharacterStat : MonoBehaviour
     private HealthBar healthBar; // 👈 Thêm tham chiếu tới thanh máu
 
     void Start()
+
     {
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
@@ -27,7 +29,7 @@ public class CharacterStat : MonoBehaviour
         UpdateHealthUI();
     }
 
-    public void TakeDamage(int dame)
+    public virtual void TakeDamage(int dame)
     {
         if (isDead) return;
 
@@ -52,13 +54,13 @@ public class CharacterStat : MonoBehaviour
         }
     }
 
-    public void Attack(CharacterStat stat)
+    public virtual void Attack(CharacterStat stat)
     {
         if (isDead) return;
         stat.TakeDamage(damage);
     }
 
-    public void RestoreHealth()
+    public virtual void RestoreHealth()
     {
         currentHealth = maxHealth;
         isDead = false;

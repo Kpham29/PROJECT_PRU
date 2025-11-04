@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1780662277450742312}
   - component: {fileID: 1780662277450742315}
+  - component: {fileID: 3608312291628965076}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -58,6 +59,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &3608312291628965076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780662277450742314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 393c1ef27e7b2b340b3df3cf7d241223, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1780662278422656657
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,8 +85,8 @@ GameObject:
   - component: {fileID: 1780662278422656652}
   - component: {fileID: 1780662278422656655}
   - component: {fileID: 1780662278422656654}
-  - component: {fileID: 9069597534880219993}
   - component: {fileID: 4641910874313811071}
+  - component: {fileID: -5177122663421856912}
   m_Layer: 7
   m_Name: Samurai
   m_TagString: Player
@@ -219,21 +232,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &9069597534880219993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1780662278422656657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de2e6bb6c95a3374bb71a76d16797e42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 150
-  damage: 20
-  isDead: 0
 --- !u!60 &4641910874313811071
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -277,3 +275,19 @@ PolygonCollider2D:
       - {x: 0.17999999, y: -0.405}
       - {x: 0.19, y: -0.345}
       - {x: 0.14, y: -0.285}
+--- !u!114 &-5177122663421856912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780662278422656657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05b105c09a579654285f4bcf2c97d5d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 150
+  damage: 20
+  currentHealth: 0
+  isDead: 0

@@ -337,19 +337,9 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 115501798}
   m_CullTransparentMesh: 1
---- !u!1 &147887984 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5086874804637090949, guid: d8e9ded483886f24c873fa3c8e120543, type: 3}
-  m_PrefabInstance: {fileID: 1570157595}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &443519084 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1399516600266840175, guid: 13798d68d8e911a469dd017de3975f31, type: 3}
-  m_PrefabInstance: {fileID: 1073024004}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &598777194 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1399516600266840165, guid: 13798d68d8e911a469dd017de3975f31, type: 3}
   m_PrefabInstance: {fileID: 1073024004}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &668314726
@@ -1395,9 +1385,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   container: {fileID: 1667173961}
   charactor:
-  - {fileID: 147887984}
-  - {fileID: 1767941767}
-  - {fileID: 598777194}
+  - {fileID: 5086874804637090949, guid: d8e9ded483886f24c873fa3c8e120543, type: 3}
+  - {fileID: 1780662278422656657, guid: c17dd4a34aba6b643a37cdf52e172046, type: 3}
+  - {fileID: 1399516600266840165, guid: 13798d68d8e911a469dd017de3975f31, type: 3}
   ease:
     serializedVersion: 2
     m_Curve:
@@ -1434,11 +1424,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1767941767 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1780662278422656657, guid: c17dd4a34aba6b643a37cdf52e172046, type: 3}
-  m_PrefabInstance: {fileID: 3591072}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1870920322
 GameObject:
   m_ObjectHideFlags: 0
