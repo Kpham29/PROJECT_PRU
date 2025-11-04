@@ -14,6 +14,8 @@ public class MainCharacterStat : CharacterStat
         UpdateHealthUI();
     }
 
+
+
     public override void TakeDamage(int dame)
     {
         base.TakeDamage(dame);
