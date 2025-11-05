@@ -53,4 +53,15 @@ public class CharacterStat : MonoBehaviour
         animator.ResetTrigger("Die");
         animator.ResetTrigger("Hurt");
     }
+
+    public virtual void Heal(int heal)
+    {
+        currentHealth += heal;
+        if(currentHealth > maxHealth) currentHealth = maxHealth;
+    }
+
+    public virtual void BuffDamage(int buff)
+    {
+        damage += buff;
+    }
 }

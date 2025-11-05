@@ -82,4 +82,15 @@ public class MainCharacterStat : CharacterStat
             healthBar.UpdateBar(currentHealth, maxHealth);
         }
     }
+
+    public override void Heal(int heal)
+    {
+        base.Heal(heal);
+        UpdateHealthUI();
+    }
+
+    public override void BuffDamage(int buff)
+    {
+        base.BuffDamage(buff);
+    }
 }
