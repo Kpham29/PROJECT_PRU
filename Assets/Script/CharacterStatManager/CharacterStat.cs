@@ -24,9 +24,6 @@ public class CharacterStat : MonoBehaviour
         if (isDead) return;
 
         currentHealth -= dame;
-        if (currentHealth < 0)
-            currentHealth = 0;
-
 
         if (currentHealth <= 0)
         {
@@ -55,5 +52,16 @@ public class CharacterStat : MonoBehaviour
         isDead = false;
         animator.ResetTrigger("Die");
         animator.ResetTrigger("Hurt");
+    }
+
+    public virtual void Heal(int heal)
+    {
+        currentHealth += heal;
+        if(currentHealth > maxHealth) currentHealth = maxHealth;
+    }
+
+    public virtual void BuffDamage(int buff)
+    {
+        damage += buff;
     }
 }
