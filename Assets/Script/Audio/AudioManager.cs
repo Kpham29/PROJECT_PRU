@@ -59,8 +59,10 @@ public class AudioManager : MonoBehaviour
     [Header("------------ Audio Settings ------------")]
     [SerializeField] private float musicFadeDuration = 1.5f;
     [SerializeField] private bool playMusicOnStart = true;
+    [SerializeField] private bool autoPlayOnSceneLoad = false; // Tự động phát nhạc khi load scene mới
 
     private Coroutine musicFadeCoroutine;
+    private bool hasPlayedStartMusic = false;
 
     private void Awake()
     {
@@ -79,9 +81,32 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        if (playMusicOnStart && backgroundMusic != null)
+        // Only play music on first start, not on scene reload
+        if (playMusicOnStart && !hasPlayedStartMusic && backgroundMusic != null)
         {
             PlayMusic(backgroundMusic, true);
+            hasPlayedStartMusic = true;
+        }
+    }
+    
+    private void OnEnable()
+    {
+        // Subscribe to scene loaded event
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    
+    private void OnDisable()
+    {
+        // Unsubscribe from scene loaded event
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+    
+    private void OnSceneLoaded(UnityEngine.SceneManagement.Scene scene, UnityEngine.SceneManagement.LoadSceneMode mode)
+    {
+        // Don't auto-play music on scene load unless enabled
+        if (!autoPlayOnSceneLoad)
+        {
+            Debug.Log($"Scene {scene.name} loaded. Waiting for MusicTrigger to change music.");
         }
     }
 
@@ -212,6 +237,14 @@ public class AudioManager : MonoBehaviour
         {
             sfxSource.PlayOneShot(clip, volumeScale);
         }
+        // Commented out to reduce console spam - uncomment when debugging
+        // else
+        // {
+        //     if (clip == null)
+        //         Debug.LogWarning("AudioClip is NULL! Cannot play SFX.");
+        //     if (sfxSource == null)
+        //         Debug.LogError("SFX AudioSource is NULL!");
+        // }
     }
 
     // Player SFX

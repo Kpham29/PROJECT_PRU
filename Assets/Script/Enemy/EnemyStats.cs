@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
@@ -37,11 +37,23 @@ public class EnemyStats : MonoBehaviour
         // Check death
         if (health <= 0)
         {
+            Debug.Log($"Enemy {gameObject.name} died! playDefaultSounds: {playDefaultSounds}, AudioManager exists: {AudioManager.Instance != null}");
+            
             DeathProcess();
 
             // Play death sound (only if default sounds enabled)
             if (playDefaultSounds && AudioManager.Instance != null)
+            {
+                Debug.Log("Playing enemy death sound...");
                 AudioManager.Instance.PlayEnemyDeath();
+            }
+            else
+            {
+                if (!playDefaultSounds)
+                    Debug.LogWarning("playDefaultSounds is disabled!");
+                if (AudioManager.Instance == null)
+                    Debug.LogError("AudioManager.Instance is NULL!");
+            }
         } // ✅ đóng đúng khối if
     } // ✅ đóng đúng hàm TakeDamage()
 
