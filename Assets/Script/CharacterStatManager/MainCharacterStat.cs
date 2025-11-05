@@ -21,13 +21,26 @@ public class MainCharacterStat : CharacterStat
         base.TakeDamage(dame);
         UpdateHealthUI();
         if (isDead)
-        {
+        {          
             if (controller != null)
             {
                 controller.enabled = false;
                 controller.StopImmediately();
             }
             StartCoroutine(WaitForDeathAnimationAndRespawn());
+
+            if (animator != null)
+            {
+                animator.ResetTrigger("Hurt");
+                animator.ResetTrigger("Jump");
+                animator.ResetTrigger("Fight");
+                animator.ResetTrigger("Specialskill");
+                animator.ResetTrigger("Shield");
+                animator.ResetTrigger("Run");
+                animator.SetFloat("Speed", 0f);
+                animator.SetBool("IsRunning", false);
+                animator.SetBool("IsGrounded", true);
+            }
         }
     }
 
