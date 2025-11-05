@@ -107,14 +107,32 @@ public class PauseMenu : MonoBehaviour
 
     public void OpenOptions()
     {
+        Debug.Log("OpenOptions() called");
+        Debug.Log($"pauseMenuUI: {pauseMenuUI?.name}, optionsMenuUI: {optionsMenuUI?.name}");
+        
         // Play button click sound
         if (AudioManager.Instance != null)
             AudioManager.Instance.PlayButtonClick();
 
         if (pauseMenuUI != null)
+        {
             pauseMenuUI.SetActive(false);
+            Debug.Log("Pause Menu UI hidden");
+        }
+        else
+        {
+            Debug.LogWarning("pauseMenuUI is null!");
+        }
+        
         if (optionsMenuUI != null)
+        {
             optionsMenuUI.SetActive(true);
+            Debug.Log("Options Menu UI shown");
+        }
+        else
+        {
+            Debug.LogWarning("optionsMenuUI is null!");
+        }
     }
 
     public void CloseOptions()
@@ -127,6 +145,5 @@ public class PauseMenu : MonoBehaviour
             optionsMenuUI.SetActive(false);
         if (pauseMenuUI != null)
             pauseMenuUI.SetActive(true);
-        Application.Quit();
     }
 }
