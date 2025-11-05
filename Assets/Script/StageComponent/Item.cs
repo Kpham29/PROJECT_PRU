@@ -4,17 +4,31 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+    private bool isPickedUp = false;
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (isPickedUp) return;
         if (collision.CompareTag("Player"))
         {
-            StartCoroutine(DisplayItem());
+            isPickedUp = true;
+            StartCoroutine(DisplayItem(collision.gameObject));
         }
     }
 
-    private IEnumerator DisplayItem()
+    private IEnumerator DisplayItem(GameObject player)
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
+        string cleanName = gameObject.name.Replace("(Clone)", "").Trim();
+        if (cleanName == "HealItem")
+        {
+            var stat = player.GetComponent<MainCharacterStat>();
+            stat.Heal(20);
+        }
+        else if(cleanName == "BuffItem")
+        {
+            var stat = player.GetComponent<MainCharacterStat>();
+            stat.BuffDamage(5);
+        }
         Destroy(gameObject);
     }
 }
