@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -8,9 +9,22 @@ public class PauseMenu : MonoBehaviour
     public GameObject optionsMenuUI;
 
     private bool isInitialized = false;
+    private float lastEscapeTime = 0f;
+    private const float escapeDelay = 0.3f; // Delay 0.3 giây giữa các lần nhấn ESC
+    private bool isProcessingEscape = false; // Flag để ngăn double trigger
 
     void Start()
     {
+        Debug.Log($"PauseMenu.Start() called on GameObject: {gameObject.name}");
+        
+        // Check how many PauseMenu instances exist
+        PauseMenu[] instances = FindObjectsOfType<PauseMenu>();
+        Debug.Log($"Number of PauseMenu instances in scene: {instances.Length}");
+        if (instances.Length > 1)
+        {
+            Debug.LogWarning("Multiple PauseMenu instances detected! This may cause issues.");
+        }
+        
         // Ensure menus are hidden at start
         if (pauseMenuUI != null)
             pauseMenuUI.SetActive(false);
@@ -24,54 +38,102 @@ public class PauseMenu : MonoBehaviour
     void Update()
     {
         if (!isInitialized) return;
+        
         // Khi nhấn Esc thì pause/unpause game
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !isProcessingEscape)
         {
-            if (GameIsPaused)
+            // Kiểm tra delay để tránh double input
+            if (Time.unscaledTime - lastEscapeTime < escapeDelay)
             {
-                // If options menu is open, close it first
-                if (optionsMenuUI != null && optionsMenuUI.activeSelf)
-                {
-                    CloseOptions();
-                }
-                else
-                {
-                    Resume();
-                }
+                Debug.Log("ESC pressed too quickly, ignoring...");
+                return;
+            }
+            
+            StartCoroutine(HandleEscapeInput());
+        }
+    }
+    
+    private IEnumerator HandleEscapeInput()
+    {
+        isProcessingEscape = true;
+        lastEscapeTime = Time.unscaledTime;
+        Debug.Log($"ESC pressed. GameIsPaused: {GameIsPaused}");
+        
+        // Wait for end of frame to ensure all input is processed
+        yield return new WaitForEndOfFrame();
+        
+        if (GameIsPaused)
+        {
+            // If options menu is open, close it first
+            if (optionsMenuUI != null && optionsMenuUI.activeSelf)
+            {
+                CloseOptions();
             }
             else
             {
-                Pause();
+                Resume();
             }
         }
+        else
+        {
+            Pause();
+        }
+        
+        // Wait a bit before allowing next input
+        yield return new WaitForSecondsRealtime(0.2f);
+        isProcessingEscape = false;
     }
 
     public void Resume()
     {
+        Debug.Log("Resume() called");
+        
         // Play menu close sound
         if (AudioManager.Instance != null)
             AudioManager.Instance.PlayMenuClose();
-        pauseMenuUI.SetActive(false);
+            
+        if (pauseMenuUI != null)
+            pauseMenuUI.SetActive(false);
+            
         Time.timeScale = 1f; // resume game
+        
+        // Resume music
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.UnpauseMusic();
+        }
+        
         GameIsPaused = false;
     }
 
     public void Pause()
     {
+        Debug.Log("Pause() called");
+        Debug.Log($"pauseMenuUI: {pauseMenuUI?.name}, isNull: {pauseMenuUI == null}");
+        
         // Play menu open sound
         if (AudioManager.Instance != null)
             AudioManager.Instance.PlayMenuOpen();
 
-        pauseMenuUI.SetActive(true); // <-- CHỈ BẬT PANEL NÀY LÊN
+        if (pauseMenuUI != null)
+        {
+            pauseMenuUI.SetActive(true);
+            Debug.Log("Pause Menu UI activated");
+        }
+        else
+        {
+            Debug.LogError("pauseMenuUI is NULL! Please assign it in Inspector.");
+        }
+        
         Time.timeScale = 0f; // pause game
-        AudioListener.pause = true; // <-- THÊM VÀO: Tạm dừng tất cả âm thanh
+        
+        // Pause music but keep UI sounds working
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PauseMusic();
+        }
+        
         GameIsPaused = true;
-
-        // <-- XÓA CÁC DÒNG GÂY LỖI BÊN DƯỚI NÀY
-        // if (pauseMenuUI != null)
-        //     pauseMenuUI.SetActive(false);
-        // if (optionsMenuUI != null)
-        //     optionsMenuUI.SetActive(true);
     }
 
     public void RestartLevel()
@@ -81,6 +143,11 @@ public class PauseMenu : MonoBehaviour
             AudioManager.Instance.PlayButtonClick();
 
         Time.timeScale = 1f; // reset time scale
+        
+        // Unpause music before reloading
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.UnpauseMusic();
+            
         GameIsPaused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
@@ -92,6 +159,11 @@ public class PauseMenu : MonoBehaviour
             AudioManager.Instance.PlayButtonClick();
 
         Time.timeScale = 1f; // reset time scale trước khi load scene
+        
+        // Unpause music before loading main menu
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.UnpauseMusic();
+            
         GameIsPaused = false;
        SceneManager.LoadScene(0); // scene 0 = Main Menu
     }

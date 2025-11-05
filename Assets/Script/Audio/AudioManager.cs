@@ -313,4 +313,22 @@ public class AudioManager : MonoBehaviour
         if (ambientSource != null)
             ambientSource.Stop();
     }
+
+    // ==================== PAUSE/UNPAUSE MUSIC ====================
+    
+    public void PauseMusic()
+    {
+        if (musicSource != null && musicSource.isPlaying)
+        {
+            musicSource.Pause();
+        }
+    }
+    
+    public void UnpauseMusic()
+    {
+        if (musicSource != null && !musicSource.isPlaying)
+        {
+            musicSource.UnPause();
+        }
+    }
 }
