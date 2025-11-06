@@ -19,15 +19,24 @@ public class Item : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         string cleanName = gameObject.name.Replace("(Clone)", "").Trim();
-        if (cleanName == "HealItem")
-        {
-            var stat = player.GetComponent<MainCharacterStat>();
-            stat.Heal(20);
-        }
-        else if(cleanName == "BuffItem")
-        {
-            var stat = player.GetComponent<MainCharacterStat>();
-            stat.BuffDamage(5);
+        var stat = player.GetComponent<MainCharacterStat>();
+        switch (cleanName)
+        {  
+            case "BuffItem": 
+                stat.BuffDamage(5);
+                break;
+            case "HealItem":
+                stat.Heal(20);
+                break;
+            case "potion1":
+                stat.Heal(40);
+                break;
+            case "potion2":
+                stat.BuffDamage(10);
+                break;
+            case "potion3":
+                stat.BuffHeal(30, 20);
+                break;
         }
         Destroy(gameObject);
     }

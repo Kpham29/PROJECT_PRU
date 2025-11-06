@@ -88,9 +88,4 @@ public class MainCharacterStat : CharacterStat
         base.Heal(heal);
         UpdateHealthUI();
     }
-
-    public override void BuffDamage(int buff)
-    {
-        base.BuffDamage(buff);
-    }
 }
