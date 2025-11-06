@@ -64,4 +64,10 @@ public class CharacterStat : MonoBehaviour
     {
         damage += buff;
     }
+
+    public virtual void BuffHeal(int heal, int increaseMaxHealth)
+    {
+        currentHealth += heal;
+        maxHealth += increaseMaxHealth;
+    }
 }

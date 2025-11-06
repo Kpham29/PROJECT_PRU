@@ -25,13 +25,25 @@ public class ChestBehaviour : MonoBehaviour
     {
         yield return null;
         float clipLen = animator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
-        yield return new WaitForSeconds(clipLen + 2f);
-        Destroy(gameObject);
+        // yield return new WaitForSeconds(clipLen + 2f);
+        // Destroy(gameObject);
     }
 
     public void DropItem()
     {
-        int idx = Random.Range(0, items.Length);
+        int idx = Random.Range(0, 100);
+        Debug.Log(idx);
+        if (idx < 10)
+        {
+            idx = 4;
+        } else if (idx < 50)
+        {
+            idx = Random.Range(2, 4);
+        } else if (idx < 100)
+        {
+            idx =  Random.Range(0, 2);
+        }
+        Debug.Log(idx);
         Vector3 spawnPos = dropPoint.position + Vector3.up * 0.05f;
         GameObject go = Instantiate(items[idx], spawnPos, Quaternion.identity);
 
