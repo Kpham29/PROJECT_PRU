@@ -85,8 +85,9 @@ GameObject:
   - component: {fileID: 5086874804637090952}
   - component: {fileID: 5086874804637090959}
   - component: {fileID: 5086874804637090958}
-  - component: {fileID: 3280974419246659833}
   - component: {fileID: -1824918530293216412}
+  - component: {fileID: 1535695175081789462}
+  - component: {fileID: 2129996220993899804}
   m_Layer: 7
   m_Name: Fighter
   m_TagString: Player
@@ -152,7 +153,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 711128952, guid: cea5707f574594d4ea2376abdeacb97f, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -232,7 +233,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weapon: {fileID: 5086874803411672390}
---- !u!60 &3280974419246659833
+--- !u!114 &-1824918530293216412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5086874804637090949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05b105c09a579654285f4bcf2c97d5d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 180
+  damage: 15
+  currentHealth: 0
+  isDead: 0
+--- !u!60 &1535695175081789462
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -257,20 +274,67 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.14999999, y: 0.205}
-      - {x: 0.14999999, y: 0.375}
-      - {x: 0.099999994, y: 0.405}
-      - {x: -0.06, y: 0.405}
-      - {x: -0.12, y: 0.33499998}
-      - {x: -0.12, y: 0.285}
-      - {x: -0.099999994, y: 0.235}
-      - {x: -0.12, y: 0.13499999}
-      - {x: -0.14999999, y: 0.035}
-      - {x: -0.14999999, y: -0.405}
+    - - {x: 0.01, y: -0.355}
+      - {x: 0.02, y: -0.355}
+      - {x: 0.02, y: -0.405}
       - {x: 0.14999999, y: -0.405}
-      - {x: 0.14999999, y: 0.015}
-      - {x: 0.11, y: 0.155}
---- !u!114 &-1824918530293216412
+      - {x: 0.14999999, y: -0.385}
+      - {x: 0.12, y: -0.36499998}
+      - {x: 0.14999999, y: -0.345}
+      - {x: 0.14999999, y: -0.065}
+      - {x: 0.14, y: -0.044999998}
+      - {x: 0.14999999, y: -0.035}
+      - {x: 0.14999999, y: -0.005}
+      - {x: 0.14, y: 0.005}
+      - {x: 0.13, y: 0.065}
+      - {x: 0.12, y: 0.074999996}
+      - {x: 0.12, y: 0.125}
+      - {x: 0.099999994, y: 0.145}
+      - {x: 0.099999994, y: 0.155}
+      - {x: 0.13, y: 0.205}
+      - {x: 0.13, y: 0.225}
+      - {x: 0.14999999, y: 0.24499999}
+      - {x: 0.14999999, y: 0.315}
+      - {x: 0.14, y: 0.355}
+      - {x: 0.099999994, y: 0.39499998}
+      - {x: 0.089999996, y: 0.39499998}
+      - {x: 0.08, y: 0.405}
+      - {x: -0.049999997, y: 0.405}
+      - {x: -0.07, y: 0.385}
+      - {x: -0.07, y: 0.36499998}
+      - {x: -0.11, y: 0.325}
+      - {x: -0.12, y: 0.285}
+      - {x: -0.089999996, y: 0.255}
+      - {x: -0.099999994, y: 0.235}
+      - {x: -0.08, y: 0.205}
+      - {x: -0.06, y: 0.195}
+      - {x: -0.06, y: 0.185}
+      - {x: -0.049999997, y: 0.175}
+      - {x: -0.07, y: 0.16499999}
+      - {x: -0.099999994, y: 0.155}
+      - {x: -0.12, y: 0.125}
+      - {x: -0.13, y: 0.065}
+      - {x: -0.14, y: 0.055}
+      - {x: -0.14, y: 0.024999999}
+      - {x: -0.14999999, y: 0.015}
+      - {x: -0.14999999, y: -0.125}
+      - {x: -0.14, y: -0.13499999}
+      - {x: -0.14, y: -0.155}
+      - {x: -0.14999999, y: -0.16499999}
+      - {x: -0.14999999, y: -0.185}
+      - {x: -0.13, y: -0.205}
+      - {x: -0.14, y: -0.21499999}
+      - {x: -0.14, y: -0.235}
+      - {x: -0.14999999, y: -0.255}
+      - {x: -0.14999999, y: -0.315}
+      - {x: -0.14, y: -0.325}
+      - {x: -0.14, y: -0.33499998}
+      - {x: -0.14999999, y: -0.345}
+      - {x: -0.14999999, y: -0.405}
+      - {x: -0.04, y: -0.405}
+      - {x: -0.04, y: -0.385}
+      - {x: -0.02, y: -0.385}
+--- !u!114 &2129996220993899804
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -279,10 +343,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 5086874804637090949}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05b105c09a579654285f4bcf2c97d5d8, type: 3}
+  m_Script: {fileID: 11500000, guid: b7e0706a7ea496649893a1734f59533f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 180
-  damage: 15
-  currentHealth: 0
-  isDead: 0
