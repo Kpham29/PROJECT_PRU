@@ -25,8 +25,8 @@ public class ChestBehaviour : MonoBehaviour
     {
         yield return null;
         float clipLen = animator.GetCurrentAnimatorClipInfo(0)[0].clip.length;
-        // yield return new WaitForSeconds(clipLen + 2f);
-        // Destroy(gameObject);
+        yield return new WaitForSeconds(clipLen + 2f);
+        Destroy(gameObject);
     }
 
     public void DropItem()
