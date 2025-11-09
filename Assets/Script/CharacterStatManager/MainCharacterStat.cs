@@ -7,9 +7,12 @@ public class MainCharacterStat : CharacterStat
     private Controller controller;
     private HealthBar healthBar;
 
+    private bool isShield;
+
     protected override void Start()
     {
         base.Start();
+        isShield = false;
         controller = GetComponent<Controller>();
         UpdateHealthUI();
     }
@@ -18,6 +21,7 @@ public class MainCharacterStat : CharacterStat
 
     public override void TakeDamage(int dame)
     {
+        if (isShield) dame = 2;
         base.TakeDamage(dame);
         UpdateHealthUI();
         if (isDead)
@@ -87,5 +91,15 @@ public class MainCharacterStat : CharacterStat
     {
         base.Heal(heal);
         UpdateHealthUI();
+    }
+
+    public IEnumerator ActiveShield()
+    {
+        if(isShield) yield break;
+
+        isShield = true;
+        float length = animator.GetCurrentAnimatorClipInfo(0).Length;
+        yield return new WaitForSeconds(length);
+        isShield = false;
     }
 }
