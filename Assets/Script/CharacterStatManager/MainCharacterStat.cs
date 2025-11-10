@@ -6,18 +6,22 @@ public class MainCharacterStat : CharacterStat
 {
     private Controller controller;
     private HealthBar healthBar;
+    private bool isShielding;
 
     protected override void Start()
     {
         base.Start();
         controller = GetComponent<Controller>();
         UpdateHealthUI();
+        isShielding = false;
     }
-
-
 
     public override void TakeDamage(int dame)
     {
+        if (isShielding)
+        {
+            dame = 2;
+        }
         base.TakeDamage(dame);
         UpdateHealthUI();
         if (isDead)
@@ -87,5 +91,16 @@ public class MainCharacterStat : CharacterStat
     {
         base.Heal(heal);
         UpdateHealthUI();
+    }
+
+    public IEnumerator ActivateShield()
+    {
+        if (isShielding) yield break; 
+
+        isShielding = true;
+        float length = animator.GetCurrentAnimatorStateInfo(0).length;
+        yield return new WaitForSeconds(length);
+        isShielding = false;
+        animator.ResetTrigger("Shield");
     }
 }
