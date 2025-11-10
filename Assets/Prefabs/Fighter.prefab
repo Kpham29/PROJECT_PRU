@@ -87,6 +87,8 @@ GameObject:
   - component: {fileID: 5086874804637090958}
   - component: {fileID: 3280974419246659833}
   - component: {fileID: -1824918530293216412}
+  - component: {fileID: 3227420048955418545}
+  - component: {fileID: 494313919903618884}
   m_Layer: 7
   m_Name: Fighter
   m_TagString: Player
@@ -244,7 +246,7 @@ PolygonCollider2D:
   m_Material: {fileID: 6200000, guid: f7abc985197829545990587ad4bf3c4f, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,3 +288,78 @@ MonoBehaviour:
   damage: 15
   currentHealth: 0
   isDead: 0
+--- !u!114 &3227420048955418545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5086874804637090949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9491c32e84c770d4286b355f30f63be3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!66 &494313919903618884
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5086874804637090949}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 3280974419246659833}
+    m_ColliderPaths:
+    - - X: 4500000
+        Y: 6150000
+      - X: 4500000
+        Y: 11250000
+      - X: 2999999
+        Y: 12150000
+      - X: -1799999
+        Y: 12150000
+      - X: -3599999
+        Y: 10049999
+      - X: -3599999
+        Y: 8550000
+      - X: -2999999
+        Y: 7050000
+      - X: -3599999
+        Y: 4049999
+      - X: -4500000
+        Y: 1050000
+      - X: -4500000
+        Y: -12150000
+      - X: 4500000
+        Y: -12150000
+      - X: 4500000
+        Y: 449999
+      - X: 3299999
+        Y: 4650000
+  m_CompositePaths:
+    m_Paths:
+    - - {x: -0.44999892, y: 0.1050034}
+      - {x: -0.4499707, y: -1.215}
+      - {x: 0.45000002, y: -1.2149707}
+      - {x: 0.449999, y: 0.045003}
+      - {x: 0.33000842, y: 0.4650108}
+      - {x: 0.45000002, y: 0.615009}
+      - {x: 0.449987, y: 1.1250079}
+      - {x: 0.299993, y: 1.215}
+      - {x: -0.1800077, y: 1.214991}
+      - {x: -0.3599999, y: 1.0049905}
+      - {x: -0.3599981, y: 0.8549954}
+      - {x: -0.3000013, y: 0.70499253}
+      - {x: -0.35999972, y: 0.40500042}
+  m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.00005
