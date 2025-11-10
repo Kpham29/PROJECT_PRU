@@ -69,5 +69,6 @@ public class CharacterStat : MonoBehaviour
     {
         currentHealth += heal;
         maxHealth += increaseMaxHealth;
+        if(currentHealth > maxHealth) currentHealth = maxHealth;
     }
 }
