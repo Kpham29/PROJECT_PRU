@@ -225,6 +225,7 @@ MonoBehaviour:
   minimumTurnDelay: 0.1
   attackAnimation: AttackWarrior
   deathAnimation: DeadWarrior
+  hurtAnimation: HurtWarrior
 --- !u!114 &1840584977810062431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,6 +343,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   damage: 15
+  currentHealth: 0
+  isDead: 0
 --- !u!1 &1840584978751675581
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,9 +387,9 @@ GameObject:
   - component: {fileID: 3522591026406241662}
   - component: {fileID: 3522591026406241661}
   - component: {fileID: 3522591026406241660}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Stats
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -418,13 +421,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b664404b6cdf6847b3152f126649287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 40
+  health: 80
+  playDefaultSounds: 1
   flashDuration: 0.1
   flashStrength: 0.3
   flashCol: {r: 0, g: 0, b: 0, a: 0}
   flashMaterial: {fileID: 2100000, guid: f24095ec9575ac346930b6b3b2e0ff3b, type: 2}
   spriter: {fileID: 1840584977810062405}
   enemyStateMachine: {fileID: 1840584977810062430}
+  isBoss: 1
 --- !u!60 &3522591026406241660
 PolygonCollider2D:
   m_ObjectHideFlags: 0

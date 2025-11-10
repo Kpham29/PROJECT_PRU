@@ -25,10 +25,11 @@ public class EnemyStats : MonoBehaviour
     {
         health -= damage;
         DamageProcess();
+        HurtProcess();
 
-        if (damageCoroutine != null)
-            StopCoroutine(Flash());
-        damageCoroutine = StartCoroutine(Flash());
+        //if (damageCoroutine != null)
+        //    StopCoroutine(Flash());
+        //damageCoroutine = StartCoroutine(Flash());
 
         // Play hurt sound (only if default sounds enabled)
         if (playDefaultSounds && AudioManager.Instance != null)
@@ -59,6 +60,7 @@ public class EnemyStats : MonoBehaviour
 
     protected virtual void DamageProcess() { }
 
+    protected virtual void HurtProcess() { }
     protected virtual void DeathProcess() { }
 
     private IEnumerator Flash()

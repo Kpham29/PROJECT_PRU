@@ -14,7 +14,7 @@ public class WeaponBehaviour : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            CharacterStat stat = collision.GetComponent<CharacterStat>();
+            EnemyStats stat = collision.GetComponent<EnemyStats>();
             if (stat != null && player != null)
             {
                 stat.TakeDamage(player.damage);
