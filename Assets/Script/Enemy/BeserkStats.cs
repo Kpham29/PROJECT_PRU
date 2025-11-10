@@ -47,6 +47,11 @@ public class BeserkStats : EnemyStats
         }
     }
 
+    protected override void HurtProcess()
+    {
+        enemyStateMachine.ChangeState(EnemyStateMachine.EnemyState.Hurt);
+    }
+
     private IEnumerator ReturnToBackgroundMusic()
     {
         yield return new WaitForSeconds(2f);

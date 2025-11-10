@@ -20,7 +20,8 @@ public class EnemyStateMachine : MonoBehaviour
         Idle,
         Move,
         Attack,
-        Death
+        Death,
+        Hurt
     }
 
     public void ChangeState(EnemyState newState)
@@ -49,6 +50,9 @@ public class EnemyStateMachine : MonoBehaviour
             case EnemyState.Death:
                 UpdateDeath();
                 break;
+            case EnemyState.Hurt:
+                UpdateHurt();
+                break;
         }
     }
 
@@ -67,6 +71,9 @@ public class EnemyStateMachine : MonoBehaviour
                 break;
             case EnemyState.Death:
                 FixUpdateDeath();
+                break;
+            case EnemyState.Hurt:
+                FixUpdateHurt();
                 break;
         }
     }
@@ -87,6 +94,9 @@ public class EnemyStateMachine : MonoBehaviour
             case EnemyState.Death:
                 EnterDeath();
                 break;
+            case EnemyState.Hurt:
+                EnterHurt();
+                break;
         }
     }
 
@@ -105,6 +115,9 @@ public class EnemyStateMachine : MonoBehaviour
                 break;
             case EnemyState.Death:
                 ExitDeath();
+                break;
+            case EnemyState.Hurt:
+                ExitHurt();
                 break;
         }
     }
@@ -125,6 +138,11 @@ public class EnemyStateMachine : MonoBehaviour
     {
 
     }
+    public virtual void EnterHurt()
+    {
+
+    }
+
 
     public virtual void ExitIdle()
     {
@@ -139,6 +157,10 @@ public class EnemyStateMachine : MonoBehaviour
 
     }
     public virtual void ExitDeath()
+    {
+
+    }
+    public virtual void ExitHurt()
     {
 
     }
@@ -160,7 +182,10 @@ public class EnemyStateMachine : MonoBehaviour
     {
 
     }
+    public virtual void UpdateHurt()
+    {
 
+    }
 
     public virtual void FixUpdateIdle()
     {
@@ -178,6 +203,9 @@ public class EnemyStateMachine : MonoBehaviour
     {
 
     }
+    public virtual void FixUpdateHurt()
+    {
 
+    }
 
 }
