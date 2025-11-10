@@ -244,8 +244,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05b105c09a579654285f4bcf2c97d5d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 180
-  damage: 15
+  maxHealth: 500
+  damage: 20
   currentHealth: 0
   isDead: 0
 --- !u!61 &7211020290694668002
@@ -271,7 +271,6 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-
   m_Points:
     m_Paths:
     - - {x: 0.14999999, y: 0.205}
@@ -287,22 +286,9 @@ BoxCollider2D:
       - {x: 0.14999999, y: -0.405}
       - {x: 0.14999999, y: 0.015}
       - {x: 0.11, y: 0.155}
---- !u!114 &-1824918530293216412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5086874804637090949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05b105c09a579654285f4bcf2c97d5d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 500
-  damage: 20
-  currentHealth: 0
-  isDead: 0
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.81}
+  m_EdgeRadius: 0
 --- !u!114 &4654686988498226264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,8 +301,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9491c32e84c770d4286b355f30f63be3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-
-  serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.81}
-  m_EdgeRadius: 0
-
