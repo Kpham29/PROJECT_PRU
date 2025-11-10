@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 1399516600266840174}
   - component: {fileID: 7242856750435834281}
   - component: {fileID: 5196275074589422449}
+  - component: {fileID: 7518940189932963530}
   m_Layer: 7
   m_Name: Shinobi
   m_TagString: Player
@@ -340,3 +341,15 @@ MonoBehaviour:
   damage: 18
   currentHealth: 0
   isDead: 0
+--- !u!114 &7518940189932963530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399516600266840165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9491c32e84c770d4286b355f30f63be3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
