@@ -10,7 +10,7 @@ public class BerserkAttack : MonoBehaviour
     {       
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<CharacterStat>().TakeDamage((int)damage);
+            collision.GetComponent<MainCharacterStat>().TakeDamage((int)damage);
         }
     }
 }
