@@ -85,9 +85,8 @@ GameObject:
   - component: {fileID: 1399516600266840171}
   - component: {fileID: 1399516600266840164}
   - component: {fileID: 1399516600266840174}
-  - component: {fileID: 7242856750435834281}
   - component: {fileID: 5196275074589422449}
-  - component: {fileID: 7518940189932963530}
+  - component: {fileID: 2349843371781268611}
   m_Layer: 7
   m_Name: Shinobi
   m_TagString: Player
@@ -233,98 +232,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!60 &7242856750435834281
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399516600266840165}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: f7abc985197829545990587ad4bf3c4f, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.36, y: 0.79}
-    newSize: {x: 0.36, y: 0.79}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.07, y: -0.295}
-      - {x: -0.03, y: -0.24499999}
-      - {x: -0.02, y: -0.24499999}
-      - {x: 0, y: -0.265}
-      - {x: 0, y: -0.315}
-      - {x: -0.01, y: -0.325}
-      - {x: -0.01, y: -0.39499998}
-      - {x: 0.13, y: -0.39499998}
-      - {x: 0.13, y: -0.385}
-      - {x: 0.08, y: -0.345}
-      - {x: 0.089999996, y: -0.285}
-      - {x: 0.12, y: -0.24499999}
-      - {x: 0.12, y: -0.21499999}
-      - {x: 0.13, y: -0.205}
-      - {x: 0.13, y: -0.125}
-      - {x: 0.12, y: -0.114999995}
-      - {x: 0.12, y: -0.074999996}
-      - {x: 0.11, y: -0.065}
-      - {x: 0.11, y: -0.035}
-      - {x: 0.099999994, y: -0.024999999}
-      - {x: 0.099999994, y: 0.005}
-      - {x: 0.089999996, y: 0.015}
-      - {x: 0.14999999, y: 0.015}
-      - {x: 0.17999999, y: 0.035}
-      - {x: 0.17999999, y: 0.095}
-      - {x: 0.14999999, y: 0.125}
-      - {x: 0.11, y: 0.125}
-      - {x: 0.08, y: 0.145}
-      - {x: 0.06, y: 0.155}
-      - {x: 0.07, y: 0.175}
-      - {x: 0.089999996, y: 0.195}
-      - {x: 0.11, y: 0.205}
-      - {x: 0.11, y: 0.275}
-      - {x: 0.08, y: 0.33499998}
-      - {x: 0.08, y: 0.375}
-      - {x: 0.06, y: 0.39499998}
-      - {x: -0.099999994, y: 0.39499998}
-      - {x: -0.13, y: 0.36499998}
-      - {x: -0.12, y: 0.345}
-      - {x: -0.16, y: 0.33499998}
-      - {x: -0.17999999, y: 0.305}
-      - {x: -0.17999999, y: 0.295}
-      - {x: -0.16, y: 0.275}
-      - {x: -0.17999999, y: 0.255}
-      - {x: -0.17999999, y: 0.235}
-      - {x: -0.16, y: 0.21499999}
-      - {x: -0.16, y: 0.175}
-      - {x: -0.13, y: 0.145}
-      - {x: -0.11, y: 0.155}
-      - {x: -0.099999994, y: 0.145}
-      - {x: -0.12, y: 0.145}
-      - {x: -0.14999999, y: 0.114999995}
-      - {x: -0.16, y: 0.035}
-      - {x: -0.17, y: 0.024999999}
-      - {x: -0.17, y: -0.005}
-      - {x: -0.17999999, y: -0.015}
-      - {x: -0.17999999, y: -0.205}
-      - {x: -0.17, y: -0.21499999}
-      - {x: -0.16, y: -0.255}
-      - {x: -0.17, y: -0.265}
-      - {x: -0.17, y: -0.305}
-      - {x: -0.17999999, y: -0.315}
-      - {x: -0.17999999, y: -0.39499998}
-      - {x: -0.07, y: -0.39499998}
-      - {x: -0.07, y: -0.375}
-      - {x: -0.089999996, y: -0.355}
-      - {x: -0.089999996, y: -0.325}
 --- !u!114 &5196275074589422449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,15 +248,29 @@ MonoBehaviour:
   damage: 18
   currentHealth: 0
   isDead: 0
---- !u!114 &7518940189932963530
-MonoBehaviour:
+--- !u!61 &2349843371781268611
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399516600266840165}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9491c32e84c770d4286b355f30f63be3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.36, y: 0.79}
+    newSize: {x: 0.36, y: 0.79}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.36, y: 0.79}
+  m_EdgeRadius: 0
