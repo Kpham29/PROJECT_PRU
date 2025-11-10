@@ -20,10 +20,12 @@ public class BeserkStats : MonoBehaviour  // KHÔNG CẦN KẾ THỪA GÌ CẢ!
         currentHealth = maxHealth;
         UpdateHealthBar(); // Dòng 1: hiển thị full máu
 
+        // Boss roar only, no music change (scene music continues)
         if (isBoss && AudioManager.Instance != null)
         {
             AudioManager.Instance.PlayBossRoar();
-            AudioManager.Instance.PlayBossMusic();
+            // Removed: AudioManager.Instance.PlayBossMusic();
+            // Scene music will continue playing
         }
     }
 
@@ -50,13 +52,8 @@ public class BeserkStats : MonoBehaviour  // KHÔNG CẦN KẾ THỪA GÌ CẢ!
         if (isBoss && AudioManager.Instance != null)
         {
             AudioManager.Instance.PlayBossDeath();
-            StartCoroutine(ReturnToBackgroundMusic());
+            // Removed: StartCoroutine(ReturnToBackgroundMusic());
+            // Scene music will continue playing, no need to switch
         }
-    }
-
-    private IEnumerator ReturnToBackgroundMusic()
-    {
-        yield return new WaitForSeconds(2f);
-        AudioManager.Instance.PlayBackgroundMusic();
     }
 }

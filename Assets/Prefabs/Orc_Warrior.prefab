@@ -575,9 +575,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b664404b6cdf6847b3152f126649287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 500
+  maxHealth: 180
   currentHealth: 0
-  damage: 50
+  damage: 15
   healthBar: {fileID: 0}
   enemyStateMachine: {fileID: 1840584977810062430}
   isBoss: 1
@@ -961,7 +961,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: -1713825457
   m_SortingOrder: 1
   m_TargetDisplay: 0

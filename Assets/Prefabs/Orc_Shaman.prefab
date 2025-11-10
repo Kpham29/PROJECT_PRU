@@ -396,9 +396,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b664404b6cdf6847b3152f126649287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 500
+  maxHealth: 120
   currentHealth: 0
-  damage: 50
+  damage: 10
   healthBar: {fileID: 649560814392534246}
   enemyStateMachine: {fileID: 2984148950966194746}
   isBoss: 1
