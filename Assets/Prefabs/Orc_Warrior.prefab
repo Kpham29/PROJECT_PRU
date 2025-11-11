@@ -145,6 +145,7 @@ Transform:
   - {fileID: 3522591026406241662}
   - {fileID: 3522591027866866710}
   - {fileID: 3522591027238658095}
+  - {fileID: 1356530024387339923}
   - {fileID: 8135789610482738789}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -541,7 +542,7 @@ GameObject:
   - component: {fileID: 3522591026406241662}
   - component: {fileID: 3522591026406241661}
   - component: {fileID: 3522591026406241660}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Stats
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -578,7 +579,7 @@ MonoBehaviour:
   maxHealth: 180
   currentHealth: 0
   damage: 15
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 6458722084378587015}
   enemyStateMachine: {fileID: 1840584977810062430}
   isBoss: 1
 --- !u!60 &3522591026406241660
@@ -934,9 +935,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3453587193047453942}
-  - {fileID: 1356530024387339923}
   m_Father: {fileID: 1840584977810062426}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -987,7 +987,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &4100124700007031034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1029,17 +1029,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6379051240903648459}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8135789610482738789}
-  m_RootOrder: 1
+  m_Father: {fileID: 1840584977810062426}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -93.599686, y: 46.057594}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6458722084378587015
