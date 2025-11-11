@@ -23,7 +23,7 @@ public class Item : MonoBehaviour
         switch (cleanName)
         {  
             case "BuffItem": 
-                stat.BuffDamage(5);
+                stat.BuffDamage(10);
                 break;
             case "HealItem":
                 stat.Heal(20);
@@ -32,7 +32,7 @@ public class Item : MonoBehaviour
                 stat.Heal(40);
                 break;
             case "potion2":
-                stat.BuffDamage(10);
+                stat.BuffDamage(20);
                 break;
             case "potion3":
                 stat.BuffHeal(30, 20);
