@@ -11,6 +11,15 @@ public class StageManager : MonoBehaviour
     private void Start()
     {
         currentMap.SetActive(true);
+        Transform boundaryObj = currentMap.transform.Find("Boundary");
+        if (boundaryObj != null)
+        {
+            PolygonCollider2D boundary = boundaryObj.GetComponent<PolygonCollider2D>();
+            if (boundary != null && CameraConfinerManager.Instance != null)
+            {
+                CameraConfinerManager.Instance.SetMapBoundary(boundary);
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
@@ -31,8 +40,16 @@ public class StageManager : MonoBehaviour
                 {
                     controller.SetInitialSpawnPoint(startPoint.position, Quaternion.identity);
                 }
-                FollowObject.SetTarget(collider.gameObject); // Cập nhật target khi chuyển map
-                Debug.Log("StageManager: Camera target updated to " + collider.gameObject.name);
+                FollowObject.SetTarget(collider.gameObject); 
+            }
+            Transform nextBoundaryObj = nextMap.transform.Find("Boundary");
+            if (nextBoundaryObj != null)
+            {
+                PolygonCollider2D newBoundary = nextBoundaryObj.GetComponent<PolygonCollider2D>();
+                if (newBoundary != null && CameraConfinerManager.Instance != null)
+                {
+                    CameraConfinerManager.Instance.SetMapBoundary(newBoundary);
+                }
             }
         }
     }
