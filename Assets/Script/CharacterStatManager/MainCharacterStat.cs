@@ -93,6 +93,12 @@ public class MainCharacterStat : CharacterStat
         UpdateHealthUI();
     }
 
+    public virtual void BufHeal(int heal, int increaseMaxHealth)
+    {
+        base.BuffHeal(heal, increaseMaxHealth);
+        UpdateHealthUI();
+    }
+
     public IEnumerator ActivateShield()
     {
         if (isShielding) yield break; 
