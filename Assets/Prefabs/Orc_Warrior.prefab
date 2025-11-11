@@ -578,7 +578,7 @@ MonoBehaviour:
   maxHealth: 500
   currentHealth: 0
   damage: 50
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 6458722084378587015}
   enemyStateMachine: {fileID: 1840584977810062430}
   isBoss: 1
 --- !u!60 &3522591026406241660
@@ -961,7 +961,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: -1713825457
   m_SortingOrder: 1
   m_TargetDisplay: 0
