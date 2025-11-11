@@ -109,6 +109,7 @@ public class Controller : MonoBehaviour
                 if (contact.normal.y > 0.5f)
                 {
                     grounded = true;
+                    animator.ResetTrigger("Jump");
                     if (AudioManager.Instance != null && myBody.velocity.y < -2f)
                         AudioManager.Instance.PlayPlayerLand();
                     break;
