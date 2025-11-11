@@ -579,7 +579,7 @@ MonoBehaviour:
   maxHealth: 180
   currentHealth: 0
   damage: 15
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 6458722084378587015}
   enemyStateMachine: {fileID: 1840584977810062430}
   isBoss: 1
 --- !u!60 &3522591026406241660
@@ -988,7 +988,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &4100124700007031034
 MonoBehaviour:
   m_ObjectHideFlags: 0
