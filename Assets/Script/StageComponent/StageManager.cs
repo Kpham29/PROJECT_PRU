@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StageManager : MonoBehaviour
 {
     [SerializeField] private GameObject currentMap;
     [SerializeField] private GameObject nextMap;
     [SerializeField] private Transform startPoint;
+    [SerializeField] private bool winGame =  false;
 
     private void Start()
     {
@@ -15,6 +17,10 @@ public class StageManager : MonoBehaviour
     {
         if (collider.CompareTag("Player"))
         {
+            if (winGame)
+            {
+                SceneManager.LoadScene("Outro");
+            }
             currentMap.SetActive(false);
             nextMap.SetActive(true);
             if (startPoint != null)
