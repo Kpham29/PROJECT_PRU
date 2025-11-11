@@ -541,7 +541,7 @@ GameObject:
   - component: {fileID: 3522591026406241662}
   - component: {fileID: 3522591026406241661}
   - component: {fileID: 3522591026406241660}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: Stats
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -578,7 +578,7 @@ MonoBehaviour:
   maxHealth: 180
   currentHealth: 0
   damage: 15
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 6458722084378587015}
   enemyStateMachine: {fileID: 1840584977810062430}
   isBoss: 1
 --- !u!60 &3522591026406241660
