@@ -12,9 +12,26 @@ public class SceneMusicManager : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log($"SceneMusicManager.Start() called on GameObject: {gameObject.name}, playOnStart={playOnStart}, sceneMusic={sceneMusic?.name}");
+        
+        // Check for multiple instances
+        var allManagers = FindObjectsOfType<SceneMusicManager>();
+        if (allManagers.Length > 1)
+        {
+            Debug.LogWarning($"SceneMusicManager: Found {allManagers.Length} instances in scene! This may cause conflicts.");
+            foreach (var manager in allManagers)
+            {
+                Debug.Log($"  - {manager.gameObject.name}: sceneMusic={manager.sceneMusic?.name}");
+            }
+        }
+        
         if (playOnStart)
         {
             StartCoroutine(PlaySceneMusicDelayed());
+        }
+        else
+        {
+            Debug.LogWarning("SceneMusicManager: playOnStart is FALSE, music will not play!");
         }
     }
 

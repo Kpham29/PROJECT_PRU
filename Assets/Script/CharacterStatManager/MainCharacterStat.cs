@@ -6,6 +6,7 @@ public class MainCharacterStat : CharacterStat
 {
     private Controller controller;
     private HealthBar healthBar;
+    private bool isShielding;
 
     private bool isShield;
 
@@ -15,13 +16,15 @@ public class MainCharacterStat : CharacterStat
         isShield = false;
         controller = GetComponent<Controller>();
         UpdateHealthUI();
+        isShielding = false;
     }
-
-
 
     public override void TakeDamage(int dame)
     {
-        if (isShield) dame = 2;
+        if (isShielding)
+        {
+            dame = 2;
+        }
         base.TakeDamage(dame);
         UpdateHealthUI();
         if (isDead)
@@ -93,13 +96,14 @@ public class MainCharacterStat : CharacterStat
         UpdateHealthUI();
     }
 
-    public IEnumerator ActiveShield()
+    public IEnumerator ActivateShield()
     {
-        if(isShield) yield break;
+        if (isShielding) yield break; 
 
-        isShield = true;
-        float length = animator.GetCurrentAnimatorClipInfo(0).Length;
+        isShielding = true;
+        float length = animator.GetCurrentAnimatorStateInfo(0).length;
         yield return new WaitForSeconds(length);
-        isShield = false;
+        isShielding = false;
+        animator.ResetTrigger("Shield");
     }
 }

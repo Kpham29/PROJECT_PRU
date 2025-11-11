@@ -88,8 +88,7 @@ public class Controller : MonoBehaviour
         else if (Input.GetButtonDown("Shield"))
         {
             animator.SetTrigger("Shield");
-            if (characterStat != null)
-                StartCoroutine(characterStat.ActiveShield());
+            StartCoroutine(characterStat.ActivateShield());
         }
     }
 

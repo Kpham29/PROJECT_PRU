@@ -184,20 +184,20 @@ MonoBehaviour:
   playerAttack: {fileID: 8300000, guid: 6d8b06ba66d554e41b32cf48770815f6, type: 3}
   playerHurt: {fileID: 0}
   playerDeath: {fileID: 8300000, guid: 99b3eba1aa3fac14abfb7aae4239de14, type: 3}
-  playerFootstep: {fileID: 0}
-  playerLand: {fileID: 0}
+  playerFootstep: {fileID: 8300000, guid: 500f2a228ce425b438cf268830a1b4e3, type: 3}
+  playerLand: {fileID: 8300000, guid: 500f2a228ce425b438cf268830a1b4e3, type: 3}
   enemyAttack: {fileID: 0}
   enemyHurt: {fileID: 0}
-  enemyDeath: {fileID: 0}
+  enemyDeath: {fileID: 8300000, guid: 8d2679bd054143945a52169c57598bcb, type: 3}
   bossAttack: {fileID: 0}
   bossHurt: {fileID: 0}
-  bossDeath: {fileID: 0}
+  bossDeath: {fileID: 8300000, guid: 8d2679bd054143945a52169c57598bcb, type: 3}
   bossRoar: {fileID: 0}
-  checkpoint: {fileID: 0}
+  checkpoint: {fileID: 8300000, guid: 55c000436b0ab9649b1d3c41624fff9a, type: 3}
   wallTouch: {fileID: 0}
   portalIn: {fileID: 0}
   portalOut: {fileID: 0}
-  itemPickup: {fileID: 0}
+  itemPickup: {fileID: 8300000, guid: 5649f686a7571e640bde4f98dda4d4d5, type: 3}
   trapActivate: {fileID: 0}
   buttonClick: {fileID: 8300000, guid: 6dc43ad79f2190b41bd34d6d02470387, type: 3}
   menuOpen: {fileID: 8300000, guid: 6dc43ad79f2190b41bd34d6d02470387, type: 3}
@@ -207,6 +207,7 @@ MonoBehaviour:
   ambientVolume: 0.5
   musicFadeDuration: 1.5
   playMusicOnStart: 1
+  autoPlayOnSceneLoad: 0
 --- !u!1 &8779560103267616892
 GameObject:
   m_ObjectHideFlags: 0

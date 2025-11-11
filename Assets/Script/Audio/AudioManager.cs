@@ -147,7 +147,13 @@ public class AudioManager : MonoBehaviour
     
     public void PlayMusic(AudioClip clip, bool fadeIn = false)
     {
-        if (clip == null) return;
+        if (clip == null)
+        {
+            Debug.LogWarning("AudioManager.PlayMusic: clip is NULL!");
+            return;
+        }
+
+        Debug.Log($"AudioManager.PlayMusic: Playing '{clip.name}', fadeIn={fadeIn}, current={musicSource.clip?.name}");
 
         if (musicFadeCoroutine != null)
             StopCoroutine(musicFadeCoroutine);
@@ -165,6 +171,8 @@ public class AudioManager : MonoBehaviour
 
     public void StopMusic(bool fadeOut = false)
     {
+        Debug.Log($"AudioManager.StopMusic: fadeOut={fadeOut}, current={musicSource.clip?.name}");
+        
         if (musicFadeCoroutine != null)
             StopCoroutine(musicFadeCoroutine);
 

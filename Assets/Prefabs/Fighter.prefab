@@ -86,8 +86,7 @@ GameObject:
   - component: {fileID: 5086874804637090959}
   - component: {fileID: 5086874804637090958}
   - component: {fileID: -1824918530293216412}
-  - component: {fileID: 1535695175081789462}
-  - component: {fileID: 2129996220993899804}
+  - component: {fileID: 7211020290694668002}
   m_Layer: 7
   m_Name: Fighter
   m_TagString: Player
@@ -198,7 +197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   runSpeed: 5
-  jumpHeight: 8
+  jumpHeight: 50
 --- !u!50 &5086874804637090959
 Rigidbody2D:
   serializedVersion: 4
@@ -245,12 +244,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05b105c09a579654285f4bcf2c97d5d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 180
-  damage: 15
+  maxHealth: 500
+  damage: 20
   currentHealth: 0
   isDead: 0
---- !u!60 &1535695175081789462
-PolygonCollider2D:
+--- !u!61 &7211020290694668002
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -278,63 +277,12 @@ PolygonCollider2D:
       - {x: 0.02, y: -0.355}
       - {x: 0.02, y: -0.405}
       - {x: 0.14999999, y: -0.405}
-      - {x: 0.14999999, y: -0.385}
-      - {x: 0.12, y: -0.36499998}
-      - {x: 0.14999999, y: -0.345}
-      - {x: 0.14999999, y: -0.065}
-      - {x: 0.14, y: -0.044999998}
-      - {x: 0.14999999, y: -0.035}
-      - {x: 0.14999999, y: -0.005}
-      - {x: 0.14, y: 0.005}
-      - {x: 0.13, y: 0.065}
-      - {x: 0.12, y: 0.074999996}
-      - {x: 0.12, y: 0.125}
-      - {x: 0.099999994, y: 0.145}
-      - {x: 0.099999994, y: 0.155}
-      - {x: 0.13, y: 0.205}
-      - {x: 0.13, y: 0.225}
-      - {x: 0.14999999, y: 0.24499999}
-      - {x: 0.14999999, y: 0.315}
-      - {x: 0.14, y: 0.355}
-      - {x: 0.099999994, y: 0.39499998}
-      - {x: 0.089999996, y: 0.39499998}
-      - {x: 0.08, y: 0.405}
-      - {x: -0.049999997, y: 0.405}
-      - {x: -0.07, y: 0.385}
-      - {x: -0.07, y: 0.36499998}
-      - {x: -0.11, y: 0.325}
-      - {x: -0.12, y: 0.285}
-      - {x: -0.089999996, y: 0.255}
-      - {x: -0.099999994, y: 0.235}
-      - {x: -0.08, y: 0.205}
-      - {x: -0.06, y: 0.195}
-      - {x: -0.06, y: 0.185}
-      - {x: -0.049999997, y: 0.175}
-      - {x: -0.07, y: 0.16499999}
-      - {x: -0.099999994, y: 0.155}
-      - {x: -0.12, y: 0.125}
-      - {x: -0.13, y: 0.065}
-      - {x: -0.14, y: 0.055}
-      - {x: -0.14, y: 0.024999999}
-      - {x: -0.14999999, y: 0.015}
-      - {x: -0.14999999, y: -0.125}
-      - {x: -0.14, y: -0.13499999}
-      - {x: -0.14, y: -0.155}
-      - {x: -0.14999999, y: -0.16499999}
-      - {x: -0.14999999, y: -0.185}
-      - {x: -0.13, y: -0.205}
-      - {x: -0.14, y: -0.21499999}
-      - {x: -0.14, y: -0.235}
-      - {x: -0.14999999, y: -0.255}
-      - {x: -0.14999999, y: -0.315}
-      - {x: -0.14, y: -0.325}
-      - {x: -0.14, y: -0.33499998}
-      - {x: -0.14999999, y: -0.345}
-      - {x: -0.14999999, y: -0.405}
-      - {x: -0.04, y: -0.405}
-      - {x: -0.04, y: -0.385}
-      - {x: -0.02, y: -0.385}
---- !u!114 &2129996220993899804
+      - {x: 0.14999999, y: 0.015}
+      - {x: 0.11, y: 0.155}
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.81}
+  m_EdgeRadius: 0
+--- !u!114 &4654686988498226264
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -343,6 +291,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 5086874804637090949}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7e0706a7ea496649893a1734f59533f, type: 3}
+  m_Script: {fileID: 11500000, guid: 9491c32e84c770d4286b355f30f63be3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
