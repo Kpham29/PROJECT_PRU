@@ -154,6 +154,12 @@ public class PatrollingStateMachine : EnemyStateMachine
         patrollPhysics.DeathColliderDeactivation();
         patrollPhysics.NegateForces();
     }
+
+    public void EndOfDeath()
+    {
+        Destroy(gameObject);
+        // gameObject.SetActive(false);
+    }
     #endregion
 
     #region HURT
