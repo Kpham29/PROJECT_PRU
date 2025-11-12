@@ -78,6 +78,9 @@ namespace Script.CharactorSelection
                 followObject.Follow = character.transform;
                 followObject.LookAt = character.transform;
                 Debug.Log("Character: Player instantiated and set as target: " + character.name);
+                
+                // Notify CameraConfinerManager about the new player after a delay
+                StartCoroutine(NotifyCameraManager());
             }
             else
             {
@@ -88,6 +91,34 @@ namespace Script.CharactorSelection
             if (controller != null)
             {
                 controller.SetInitialSpawnPoint(spawnPoint.transform.position, Quaternion.identity);
+            }
+        }
+
+        private System.Collections.IEnumerator NotifyCameraManager()
+        {
+            // Wait longer for CameraConfinerManager to be created in the new scene
+            yield return new WaitForSeconds(1f);
+            
+            int maxNotifications = 10;
+            int notificationCount = 0;
+            
+            while (notificationCount < maxNotifications)
+            {
+                if (CameraConfinerManager.Instance != null)
+                {
+                    CameraConfinerManager.Instance.ForceReconnectToPlayer();
+                    Debug.Log("Character: Notified CameraConfinerManager to reconnect (attempt " + (notificationCount + 1) + ")");
+                    break;
+                }
+                
+                notificationCount++;
+                yield return new WaitForSeconds(0.3f);
+                Debug.Log("Character: Waiting for CameraConfinerManager... attempt " + (notificationCount + 1));
+            }
+            
+            if (notificationCount >= maxNotifications)
+            {
+                Debug.LogWarning("Character: Failed to find CameraConfinerManager after " + maxNotifications + " attempts");
             }
         }
     }

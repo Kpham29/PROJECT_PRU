@@ -8,12 +8,9 @@ public class MainCharacterStat : CharacterStat
     private HealthBar healthBar;
     private bool isShielding;
 
-    private bool isShield;
-
     protected override void Start()
     {
         base.Start();
-        isShield = false;
         controller = GetComponent<Controller>();
         UpdateHealthUI();
         isShielding = false;

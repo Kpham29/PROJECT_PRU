@@ -147,10 +147,31 @@ public class PauseMenu : MonoBehaviour
         // Unpause music before reloading
         if (AudioManager.Instance != null)
             AudioManager.Instance.UnpauseMusic();
+
+        // Destroy existing CameraConfinerManager to force fresh initialization
+        if (CameraConfinerManager.Instance != null)
+        {
+            Debug.Log("PauseMenu: Destroying CameraConfinerManager for restart");
+            Destroy(CameraConfinerManager.Instance.gameObject);
+        }
+
+        // Reset persistent character position to initial spawn point
+        GameObject persistentPlayer = GameObject.FindWithTag("Player");
+        if (persistentPlayer != null)
+        {
+            Controller controller = persistentPlayer.GetComponent<Controller>();
+            if (controller != null)
+            {
+                // Reset to initial spawn point
+                controller.SetInitialSpawnPoint(controller.transform.position, controller.transform.rotation);
+                Debug.Log("PauseMenu: Reset persistent player position for restart");
+            }
+        }
             
         GameIsPaused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
 
     public void LoadMainMenu()
     {
@@ -163,6 +184,21 @@ public class PauseMenu : MonoBehaviour
         // Unpause music before loading main menu
         if (AudioManager.Instance != null)
             AudioManager.Instance.UnpauseMusic();
+
+        // Clean up persistent objects when returning to main menu
+        GameObject persistentPlayer = GameObject.FindWithTag("Player");
+        if (persistentPlayer != null)
+        {
+            Debug.Log("PauseMenu: Destroying persistent player when returning to main menu");
+            Destroy(persistentPlayer);
+        }
+
+        // Destroy CameraConfinerManager instance
+        if (CameraConfinerManager.Instance != null)
+        {
+            Debug.Log("PauseMenu: Destroying CameraConfinerManager when returning to main menu");
+            Destroy(CameraConfinerManager.Instance.gameObject);
+        }
             
         GameIsPaused = false;
        SceneManager.LoadScene(0); // scene 0 = Main Menu

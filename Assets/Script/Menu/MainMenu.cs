@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Cinemachine;
 
 public class MainMenu : MonoBehaviour
 {
@@ -22,6 +23,25 @@ public class MainMenu : MonoBehaviour
         // Play button click sound
         if (AudioManager.Instance != null)
             AudioManager.Instance.PlayButtonClick();
+
+        // Clean up any existing persistent objects before starting new game
+        GameObject existingPlayer = GameObject.FindWithTag("Player");
+        if (existingPlayer != null)
+        {
+            Debug.Log("MainMenu: Destroying existing persistent player for new game");
+            Destroy(existingPlayer);
+        }
+
+        // Find and destroy persistent cameras
+        CinemachineVirtualCamera[] persistentCameras = FindObjectsOfType<CinemachineVirtualCamera>();
+        foreach (var cam in persistentCameras)
+        {
+            if (cam.gameObject.scene.name == "DontDestroyOnLoad")
+            {
+                Debug.Log("MainMenu: Destroying persistent camera: " + cam.name);
+                Destroy(cam.gameObject);
+            }
+        }
 
         // ✅ Đoạn dưới đây là phần lặp bị lỗi — đã fix bằng cách giữ lại 1 hàm duy nhất.
         SceneManager.LoadScene(2);
