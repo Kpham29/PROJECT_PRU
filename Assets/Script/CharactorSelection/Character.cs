@@ -1,3 +1,4 @@
+using Cinemachine;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -60,10 +61,6 @@ namespace Script.CharactorSelection
                 {
                     Debug.LogWarning("HealthBarPrefab or CanvasTransform not assigned!");
                 }
-
-                // Gán camera
-                FollowObject.SetTarget(character);
-                Debug.Log("Character: Player instantiated and set as target: " + character.name);
             }
             else
             {
@@ -79,6 +76,12 @@ namespace Script.CharactorSelection
                 {
                     Debug.LogError("FollowObject component not found on mainCamera!");
                 }
+                
+                CinemachineVirtualCamera followObject = mainCamera.GetComponent<CinemachineVirtualCamera>(); 
+                // Gán camera
+                followObject.Follow = character.transform;
+                followObject.LookAt = character.transform;
+                Debug.Log("Character: Player instantiated and set as target: " + character.name);
             }
             else
             {
