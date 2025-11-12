@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 public class CharacterStat : MonoBehaviour
@@ -63,6 +63,9 @@ public class CharacterStat : MonoBehaviour
     public virtual void BuffDamage(int buff)
     {
         damage += buff;
+        Debug.Log($"ATK tăng: {damage - buff} → {damage}");
+
+        NotifyDamageChanged(); // Cập nhật UI
     }
 
     public virtual void BuffHeal(int heal, int increaseMaxHealth)
@@ -70,5 +73,13 @@ public class CharacterStat : MonoBehaviour
         maxHealth += increaseMaxHealth;
         currentHealth += heal;
         if(currentHealth > maxHealth) currentHealth = maxHealth;
+    }
+    public void NotifyDamageChanged()
+    {
+        DamageUI ui = FindObjectOfType<DamageUI>();
+        if (ui != null)
+        {
+            // UI sẽ tự update
+        }
     }
 }
