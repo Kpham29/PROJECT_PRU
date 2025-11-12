@@ -195,8 +195,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a71cd8335cee2148a195302ca8888ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
-  runSpeed: 5
+  moveSpeed: 4
+  runSpeed: 8
   jumpHeight: 10
 --- !u!50 &5086874804637090959
 Rigidbody2D:
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05b105c09a579654285f4bcf2c97d5d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1000
+  maxHealth: 10000
   damage: 20
   currentHealth: 0
   isDead: 0

@@ -184,8 +184,12 @@ public class Controller : MonoBehaviour
         {
             Flip();
         }
-        FollowObject.SetTarget(gameObject); // Cập nhật target sau respawn
-        Debug.Log($"Player respawned at {(hasCheckpoint ? "checkpoint" : "initial spawn point")}. Target updated to " + gameObject.name);
+        // Cập nhật camera target thông qua CameraConfinerManager
+        if (CameraConfinerManager.Instance != null)
+        {
+            CameraConfinerManager.Instance.UpdateCameraTarget();
+        }
+        Debug.Log($"Player respawned at {(hasCheckpoint ? "checkpoint" : "initial spawn point")}. Camera target updated.");
     }
 
     public void StopImmediately()

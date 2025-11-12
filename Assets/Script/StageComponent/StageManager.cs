@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class StageManager : MonoBehaviour
@@ -40,7 +40,11 @@ public class StageManager : MonoBehaviour
                 {
                     controller.SetInitialSpawnPoint(startPoint.position, Quaternion.identity);
                 }
-                FollowObject.SetTarget(collider.gameObject); 
+                // Cập nhật camera target khi chuyển map
+                if (CameraConfinerManager.Instance != null)
+                {
+                    CameraConfinerManager.Instance.UpdateCameraTarget();
+                } 
             }
             Transform nextBoundaryObj = nextMap.transform.Find("Boundary");
             if (nextBoundaryObj != null)
