@@ -30,8 +30,6 @@ public class Controller : MonoBehaviour
         initialSpawnRotation = transform.rotation;
         respawnPosition = initialSpawnPoint;
         respawnRotation = initialSpawnRotation;
-        FollowObject.SetTarget(gameObject); 
-        Debug.Log("Controller: Set target to " + gameObject.name);
     }
 
     void FixedUpdate()
@@ -127,6 +125,16 @@ public class Controller : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Trap"))
+        {
+            characterStat.TakeDamage(20);
+            if (AudioManager.Instance != null)
+                AudioManager.Instance.PlayTrapActivate();
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Trap"))
         {
