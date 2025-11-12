@@ -32,6 +32,7 @@ public class BeserkStats : MonoBehaviour  // KHÔNG CẦN KẾ THỪA GÌ CẢ!
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;
+        enemyStateMachine.ChangeState(EnemyStateMachine.EnemyState.Hurt);
         if (currentHealth < 0) currentHealth = 0;
 
         UpdateHealthBar(); // Dòng 2: cập nhật thanh máu

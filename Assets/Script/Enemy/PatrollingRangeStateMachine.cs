@@ -35,6 +35,9 @@ public class PatrollingRangeStateMachine : EnemyStateMachine
     [Header("DEATH STATE")]
     [SerializeField] private string deathAnimation;
 
+    [Header("HURT STATE")]
+    [SerializeField] private string hurtAnimation;
+
 
     #region IDLE
     public override void EnterIdle()
@@ -186,6 +189,30 @@ public class PatrollingRangeStateMachine : EnemyStateMachine
         anim.Play(deathAnimation);
         patrollPhysics.DeathColliderDeactivation();
         patrollPhysics.NegateForces();
+    }
+    #endregion
+
+    #region HURT
+    public override void EnterHurt()
+    {
+        anim.Play(hurtAnimation);
+        patrollPhysics.NegateForces();
+    }
+
+    public void EndOfHurt()
+    {
+        if (previousState == EnemyState.Attack)
+        {
+            ChangeState(EnemyState.Idle);
+        }
+        else if (previousState == EnemyState.Move)
+        {
+            ChangeState(EnemyState.Move);
+        }
+        else
+        {
+            ChangeState(EnemyState.Idle);
+        }
     }
     #endregion
 }

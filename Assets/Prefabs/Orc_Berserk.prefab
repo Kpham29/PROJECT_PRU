@@ -817,6 +817,7 @@ MonoBehaviour:
   minimumTurnDelay: 0.1
   attackAnimation: AttackBerserk
   deathAnimation: DeathBerserk
+  hurtAnimation: HurtBerserk
 --- !u!114 &2984148950934923508
 MonoBehaviour:
   m_ObjectHideFlags: 0

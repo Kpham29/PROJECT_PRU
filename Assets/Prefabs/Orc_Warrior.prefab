@@ -226,6 +226,7 @@ MonoBehaviour:
   minimumTurnDelay: 0.1
   attackAnimation: AttackWarrior
   deathAnimation: DeadWarrior
+  hurtAnimation: HurtWarrior
 --- !u!114 &1840584977810062431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -987,7 +988,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &4100124700007031034
 MonoBehaviour:
   m_ObjectHideFlags: 0

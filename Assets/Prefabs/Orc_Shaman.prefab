@@ -1054,6 +1054,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 640
   deathAnimation: DeathShaman
+  hurtAnimation: HurtShaman
 --- !u!1 &7556405776746075218
 GameObject:
   m_ObjectHideFlags: 0
