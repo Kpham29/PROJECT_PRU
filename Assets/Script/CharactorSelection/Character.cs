@@ -72,10 +72,6 @@ namespace Script.CharactorSelection
             {
                 persistentCamera = mainCamera;
                 DontDestroyOnLoad(mainCamera);
-                if (mainCamera.GetComponent<FollowObject>() == null)
-                {
-                    Debug.LogError("FollowObject component not found on mainCamera!");
-                }
                 
                 CinemachineVirtualCamera followObject = mainCamera.GetComponent<CinemachineVirtualCamera>(); 
                 // Gán camera
