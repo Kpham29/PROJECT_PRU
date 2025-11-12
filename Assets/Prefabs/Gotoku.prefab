@@ -170,6 +170,7 @@ MonoBehaviour:
   minimumTurnDelay: 0.1
   attackAnimation: AttackGotoku
   deathAnimation: DeathGotoku
+  keyToDropPrefab: {fileID: 3605401798355390263, guid: ebbfb2e00bed0214d92d44e354a4f4eb, type: 3}
   hurtAnimation: HurtGotoku
 --- !u!114 &5894469598072047065
 MonoBehaviour:

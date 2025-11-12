@@ -12,6 +12,9 @@ TagManager:
   - HealItem
   - BuffItem
   - MiniMap
+  - Ladder
+  - Platform
+  - Key
   layers:
   - Default
   - TransparentFX

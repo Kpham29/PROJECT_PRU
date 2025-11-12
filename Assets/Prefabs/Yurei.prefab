@@ -482,6 +482,7 @@ MonoBehaviour:
   minimumTurnDelay: 0.1
   attackAnimation: AttackYurei
   deathAnimation: DeathYurei
+  keyToDropPrefab: {fileID: 3605401798355390263, guid: ebbfb2e00bed0214d92d44e354a4f4eb, type: 3}
   hurtAnimation: HurtYurei
 --- !u!114 &5609874838441882018
 MonoBehaviour:

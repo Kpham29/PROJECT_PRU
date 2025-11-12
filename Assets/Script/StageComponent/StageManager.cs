@@ -6,7 +6,6 @@ public class StageManager : MonoBehaviour
     [SerializeField] private GameObject currentMap;
     [SerializeField] private GameObject nextMap;
     [SerializeField] private Transform startPoint;
-    [SerializeField] private bool winGame =  false;
 
     private void Start()
     {
@@ -26,34 +25,47 @@ public class StageManager : MonoBehaviour
     {
         if (collider.CompareTag("Player"))
         {
-            if (winGame)
+            if (currentMap != null && nextMap != null && currentMap == nextMap)
             {
                 SceneManager.LoadScene("Outro");
+                return;
             }
-            currentMap.SetActive(false);
-            nextMap.SetActive(true);
-            if (startPoint != null)
+            PlayerInventory inventory = collider.GetComponent<PlayerInventory>();
+            if (inventory != null && inventory.hasKey == true)
             {
-                collider.transform.position = startPoint.position;
-                Controller controller = collider.GetComponent<Controller>();
-                if (controller != null)
+                currentMap.SetActive(false);
+                nextMap.SetActive(true);
+                if (startPoint != null)
                 {
-                    controller.SetInitialSpawnPoint(startPoint.position, Quaternion.identity);
+                    collider.transform.position = startPoint.position;
+                    Controller controller = collider.GetComponent<Controller>();
+                    if (controller != null)
+                    {
+                        controller.SetInitialSpawnPoint(startPoint.position, Quaternion.identity);
+                    }
+
+                    // Cập nhật camera target khi chuyển map
+                    if (CameraConfinerManager.Instance != null)
+                    {
+                        CameraConfinerManager.Instance.UpdateCameraTarget();
+                    }
                 }
-                // Cập nhật camera target khi chuyển map
-                if (CameraConfinerManager.Instance != null)
+
+                Transform nextBoundaryObj = nextMap.transform.Find("Boundary");
+                if (nextBoundaryObj != null)
                 {
-                    CameraConfinerManager.Instance.UpdateCameraTarget();
-                } 
+                    PolygonCollider2D newBoundary = nextBoundaryObj.GetComponent<PolygonCollider2D>();
+                    if (newBoundary != null && CameraConfinerManager.Instance != null)
+                    {
+                        CameraConfinerManager.Instance.SetMapBoundary(newBoundary);
+                    }
+                }
+                inventory.hasKey = false;
+                inventory.UsedKey();
             }
-            Transform nextBoundaryObj = nextMap.transform.Find("Boundary");
-            if (nextBoundaryObj != null)
+            else
             {
-                PolygonCollider2D newBoundary = nextBoundaryObj.GetComponent<PolygonCollider2D>();
-                if (newBoundary != null && CameraConfinerManager.Instance != null)
-                {
-                    CameraConfinerManager.Instance.SetMapBoundary(newBoundary);
-                }
+                Debug.Log("Cổng bị khóa! Cần chìa khóa.");
             }
         }
     }

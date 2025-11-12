@@ -26,6 +26,7 @@ public class PatrollingStateMachine : EnemyStateMachine
 
     [Header("DEATH STATE")]
     [SerializeField] private string deathAnimation;
+    [SerializeField] private GameObject keyToDropPrefab;
 
     [Header("HURT STATE")]
     [SerializeField] private string hurtAnimation;
@@ -35,7 +36,7 @@ public class PatrollingStateMachine : EnemyStateMachine
     public override void EnterIdle()
     {
         anim.Play(idleAnimationName);
-        idleStateTimer = Random.Range(minIdleTime, minIdleTime);
+        idleStateTimer = Random.Range(minIdleTime, maxIdleTime);
         patrollPhysics.NegateForces();
     }
 
@@ -159,6 +160,8 @@ public class PatrollingStateMachine : EnemyStateMachine
     {
         Destroy(gameObject);
         // gameObject.SetActive(false);
+        GameObject droppedKey = Instantiate(keyToDropPrefab, transform.position, Quaternion.identity);
+        droppedKey.AddComponent<DropItem>();
     }
     #endregion
 
