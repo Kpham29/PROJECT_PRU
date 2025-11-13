@@ -1,0 +1,551 @@
+fileFormatVersion: 2
+guid: fe1ca593d2d583845a51bac6178f0543
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boss_RangeAttack_Full_128x128_0
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 408
+        width: 53
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48cce142809fd074891338664ecdaae3
+      internalID: 1059946720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RangeAttack_Full_128x128_1
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 410
+        width: 79
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b8d6d20ec333d419e708e71ef4f7ff
+      internalID: 2030951149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RangeAttack_Full_128x128_2
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 408
+        width: 45
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc307cb1f52c2c1408b97aed4cf75988
+      internalID: -984128926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RangeAttack_Full_128x128_3
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 408
+        width: 47
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ff689e1c785da42bfc01369ac87230
+      internalID: 779479336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RangeAttack_Full_128x128_4
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 408
+        width: 49
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10587d570d7d90d499e400ae006e33cc
+      internalID: -1217561312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RangeAttack_Full_128x128_5
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 280
+        width: 49
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4db7535a0a8e6a44fab7d9face761aac
+      internalID: 1886536979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RangeAttack_Full_128x128_6
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 281
+        width: 47
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db1dae4f1a92395488ebbf0e4dcc47eb
+      internalID: -839811004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RangeAttack_Full_128x128_7
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 281
+        width: 47
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39eb24ec302e2214bbf779b89486c11e
+      internalID: -1655431270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RangeAttack_Full_128x128_8
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 281
+        width: 47
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c7ebab698aa53d4ab155cb0198e6ca1
+      internalID: -189059014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RangeAttack_Full_128x128_9
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 280
+        width: 49
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57c4932586a6b1349994b8ee69cccd6b
+      internalID: 1801848378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RangeAttack_Full_128x128_10
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 153
+        width: 47
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8d1779db8d1b1d4cb50d0884df3a7f5
+      internalID: 1524933072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RangeAttack_Full_128x128_11
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 153
+        width: 47
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fdde0bf17324f742b3163a09f1cb852
+      internalID: 2113842927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RangeAttack_Full_128x128_12
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 153
+        width: 47
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57d589fa9da73414a9e91246aa1b049e
+      internalID: -425293760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RangeAttack_Full_128x128_13
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 152
+        width: 46
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2d28ce35c56468439a690487ab7ded6
+      internalID: -80789095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RangeAttack_Full_128x128_14
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 152
+        width: 46
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1616d004f9b294d4d8082fcd58567d85
+      internalID: 936231454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RangeAttack_Full_128x128_15
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 22
+        width: 97
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf02d101411d07345b314b37e1c026d1
+      internalID: -102705844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RangeAttack_Full_128x128_16
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 23
+        width: 97
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a1cfd268d5d9914b808ed3187d1faaa
+      internalID: -320996057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RangeAttack_Full_128x128_17
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 22
+        width: 97
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c109f95b3c9e485428ad0bd23594dd92
+      internalID: 1321626302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RangeAttack_Full_128x128_18
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 25
+        width: 63
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a260a6fbd84649248a5f8c92dbffcbe0
+      internalID: 1817982578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RangeAttack_Full_128x128_19
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 24
+        width: 53
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 280456fe411927844817163b9ad7ffba
+      internalID: 645744803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Boss_RangeAttack_Full_128x128_0: 1059946720
+      Boss_RangeAttack_Full_128x128_1: 2030951149
+      Boss_RangeAttack_Full_128x128_10: 1524933072
+      Boss_RangeAttack_Full_128x128_11: 2113842927
+      Boss_RangeAttack_Full_128x128_12: -425293760
+      Boss_RangeAttack_Full_128x128_13: -80789095
+      Boss_RangeAttack_Full_128x128_14: 936231454
+      Boss_RangeAttack_Full_128x128_15: -102705844
+      Boss_RangeAttack_Full_128x128_16: -320996057
+      Boss_RangeAttack_Full_128x128_17: 1321626302
+      Boss_RangeAttack_Full_128x128_18: 1817982578
+      Boss_RangeAttack_Full_128x128_19: 645744803
+      Boss_RangeAttack_Full_128x128_2: -984128926
+      Boss_RangeAttack_Full_128x128_3: 779479336
+      Boss_RangeAttack_Full_128x128_4: -1217561312
+      Boss_RangeAttack_Full_128x128_5: 1886536979
+      Boss_RangeAttack_Full_128x128_6: -839811004
+      Boss_RangeAttack_Full_128x128_7: -1655431270
+      Boss_RangeAttack_Full_128x128_8: -189059014
+      Boss_RangeAttack_Full_128x128_9: 1801848378
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
